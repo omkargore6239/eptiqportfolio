@@ -1,4 +1,4 @@
-import TypingEffect from 'react-typing-effect';
+// import TypingEffect from 'react-typing-effect';
 
 function Introduction() {
   return (
