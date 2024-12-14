@@ -3,15 +3,15 @@ import { FaLink } from 'react-icons/fa'; // Import link icon
 function Projects() {
   const projects = [
 
-    { title: 'Offerlearning', link: 'https://offerlearning.com/', image: '/project/offerlearning.jpg' },
-    { title: 'Padcorp', link: 'https://padcorp.shop/', image: '/project/padcorp.jpg' },
-    { title: 'VegoBike', link: 'https://play.google.com/store/apps/details?id=com.vegobike', image: '/project/vegobike.jpg' },
-    { title: 'Sasha Clothings', link: 'https://sashaclothings.in', image: '/project/sashaclothings.jpg' },
-    { title: 'AK Enterprises', link: 'https://akenterprisess.in', image: '/project/akenterprises.jpg' },
-    { title: 'Harkal Studios', link: 'https://harkalstudios.in', image: '/project/harkalstudios.jpg' },
-    { title: 'Pandvesdeltaforce', link: 'https://pandvesdeltaforce.com', image: '/project/pandvesdeltaforce.jpg' },
-    { title: 'Owlsale Windo', link: 'https://play.google.com/store/apps/details?id=com.owlsalewindo.customer ', image: '/project/owlsalewindo.jpg' },
-    { title: 'OK Bikes', link: 'https://okbikes.eptiqos.com/', image: '/project/okbikes.jpg' },
+    { title: 'Offerlearning', link: 'https://offerlearning.com/', image: '/project/offerlearning.jpeg' },
+    { title: 'Padcorp', link: 'https://padcorp.shop/', image: '/project/padcorp.jpeg' },
+    { title: 'VegoBike', link: 'https://play.google.com/store/apps/details?id=com.vegobike', image: '/project/vegobike.jpeg' },
+    { title: 'Sasha Clothings', link: 'https://sashaclothings.in', image: '/project/sashaclothings.jpeg' },
+    { title: 'AK Enterprises', link: 'https://akenterprisess.in', image: '/project/akenterprises.jpeg' },
+    { title: 'Harkal Studios', link: 'https://harkalstudios.in', image: '/project/harkalstudios.jpeg' },
+    { title: 'Pandvesdeltaforce', link: 'https://pandvesdeltaforce.com', image: '/project/pandvesdeltaforce.jpeg' },
+    { title: 'Owlsale Windo', link: 'https://play.google.com/store/apps/details?id=com.owlsalewindo.customer ', image: '/project/owlsalewindo.jpeg' },
+    { title: 'OK Bikes', link: 'https://okbikes.eptiqos.com/', image: '/project/okbikes.jpeg' },
   ];
 
   return (

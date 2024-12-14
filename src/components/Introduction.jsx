@@ -6,7 +6,7 @@ function Introduction() {
       <div className="text-center space-y-4 px-6">
         <h2 className="text-4xl md:text-5xl font-extrabold animate-fadeInUp">
           Welcome to Eptiq Technologies
-          {/* <span className="text-blue-700">
+          {/* <span class Name="text-blue-700">
             <TypingEffect
               text={['Eptiq Technologies']} // Add the text you want to type
               speed={80} // Speed of typing (in ms)
@@ -26,7 +26,7 @@ function Introduction() {
           rel="noopener noreferrer"
           className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full shadow-md animate-pulse inline-block"
         >
-          Learn More
+          Visit Website
         </a>
       </div>
     </section>
