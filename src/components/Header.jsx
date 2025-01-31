@@ -8,6 +8,15 @@ function Header() {
         alt="Eptiq Technologies Logo"
         className="h-12"
       />
+
+<a
+          href="https://eptiq.in/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full shadow-md animate-pulse inline-block"
+        >
+          Visit Website
+        </a>
       
     </header>
   );

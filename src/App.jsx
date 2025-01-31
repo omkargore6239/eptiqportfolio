@@ -1,24 +1,42 @@
-import { BrowserRouter as Router } from 'react-router-dom';
-// import { BrowserRouter, Route, Routes } from 'react-router-dom';
- // Import BrowserRouter
-import Header from './components/Header';
-import Introduction from './components/Introduction';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header'; // Correct import
+import HeroPage from './components/HeroPage';
 import Services from './components/Services';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
+import ProjectDetails from './components/ProjectDetails';
 import './index.css';
 
 function App() {
   return (
-    <Router> {/* Wrap your entire app with BrowserRouter */}
-      <div>
+    <Router>
+      <div className="flex flex-col min-h-screen">
         <Header />
-        <main>
-          <Introduction />
-          <Services />
-          <Projects />
-          <Footer />
+        
+        <main className="flex-grow">
+          <Routes>
+            <Route 
+              path="/" 
+              element={
+                <>
+                  <section id="hero">
+                    <HeroPage />
+                  </section>
+                  <section id="services">
+                    <Services />
+                  </section>
+                  <section id="projects">
+                    <Projects />
+                  </section>
+                </>
+              } 
+            />
+            <Route path="/projectdetails/:id" element={<ProjectDetails />} />
+          </Routes>
         </main>
+
+        <Footer />
       </div>
     </Router>
   );
