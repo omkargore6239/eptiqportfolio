@@ -2,7 +2,7 @@ import React from 'react';
 import { FaLaptopCode, FaMobileAlt, FaProjectDiagram, FaUserTie, FaIndustry, FaPencilRuler, FaBullhorn, FaPalette } from 'react-icons/fa';
 
 // Import Video
-import rocketAnimation from '../assets/office/rocketanimation.mp4'; // Adjust path if needed
+import rocketAnimation from '/office/rocketanimation.mp4'; // Adjust path if needed
 
 function Services() {
   const services = [

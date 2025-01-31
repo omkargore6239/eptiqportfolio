@@ -28,9 +28,9 @@ function Projects() {
   const filteredProjects = activeCategory === 'All' ? projects : projects.filter(project => project.category === activeCategory);
 
   return (
-    <section className="relative bg-gradient-to-r from-blue-500 to-white text-white py-16 px-6 min-h-screen flex flex-col">
+    <section className="relative bg-blue-500 text-white py-16 px-6 min-h-screen flex flex-col">
       <div className="text-center space-y-8 w-full">
-        <h2 className="text-4xl font-extrabold animate-fadeInUp sticky top-0 z-10 bg-gradient-to-r from-blue-500 to-white py-2">
+        <h2 className="text-4xl font-extrabold animate-fadeInUp sticky top-0 z-10 bg-blue-500 py-2">
           Our Projects
         </h2>
 
