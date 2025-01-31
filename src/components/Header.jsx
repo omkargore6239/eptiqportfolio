@@ -4,7 +4,7 @@ function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-blue-500 text-white px-6 py-4 flex justify-between items-center">
+    <header className="fixed top-0 left-0 w-full z-50 bg-blue-400 text-white px-6 py-4 flex justify-between items-center">
       {/* Logo */}
       <a href="/" target="_blank" rel="noopener noreferrer">
         <img
