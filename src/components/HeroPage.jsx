@@ -66,21 +66,21 @@ function HeroPage() {
           <Slider {...settings}>
             <div>
               <img
-                src="/public/office/office1.png"
+                src="/public/office/office 1.jpg"
                 alt="Manufacturing Execution System"
                 className="w-full h-auto md:h-[400px] lg:h-[500px] object-cover rounded-lg"
               />
             </div>
             <div>
               <img
-                src="/public/office/Office2.png"
+                src="/public/office/Office 2.jpg"
                 alt="ERP Management"
                 className="w-full h-auto md:h-[400px] lg:h-[500px] object-cover rounded-lg"
               />
             </div>
             <div>
               <img
-                src="/public/office/Office3.png"
+                src="/public/office/Office 3.jpg"
                 alt="Automation & Robotics"
                 className="w-full h-auto md:h-[400px] lg:h-[500px] object-cover rounded-lg"
               />
