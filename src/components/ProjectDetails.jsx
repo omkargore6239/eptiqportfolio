@@ -792,6 +792,16 @@ const ProjectDetails = () => {
                 >
                   <FaLink className="mr-2" /> Visit Project
                 </a>
+                <br />
+                      <br />
+                <a
+                  href="https://eptiq.in/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center  px-6 py-3 bg-green-600 text-white font-semibold rounded-md shadow-lg hover:bg-green-700 transition"
+                >
+                  <FaLink className="mr-2" /> Book Demo
+                </a>
               </div>
             </div>
 

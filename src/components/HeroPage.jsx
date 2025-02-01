@@ -48,23 +48,23 @@ function HeroPage() {
   return (
     <section className="relative bg-blue-500 to-white text-white w-full min-h-screen flex flex-col md:flex-row items-center justify-center py-12 px-6 md:px-12 mt-16 sm:mt-0">
       <div className="text-center md:text-left md:w-1/2 space-y-6 md:space-y-8">
-        <h2 className="text-5xl md:text-6xl font-extrabold animate-fadeInUp text-shadow-lg">
+        <h2 className="text-5xl md:text-6xl font-bold text-wrap animate-fadeInUp text-shadow-lg">
           <span className="text-cyan-200">Welcome to</span> Eptiq Technologies
         </h2>
         <p className="text-lg md:text-xl font-light md:font-semibold text-shadow-md">
           <span className="font-bold text-yellow-200">Empowering Businesses</span> with Cutting-Edge Digital Solutions
         </p>
-        <div className="flex flex-wrap gap-4 text-lg md:text-xl font-medium text-white">
-          <div className="flex items-center gap-2 bg-white bg-opacity-20 p-3 rounded-lg shadow-md">
-            <FaLaptopCode className="text-yellow-400 text-3xl" /> Web Development
-          </div>
-          <div className="flex items-center gap-2 bg-white bg-opacity-20 p-3 rounded-lg shadow-md">
-            <FaMobileAlt className="text-yellow-400 text-3xl" /> Mobile App Development
-          </div>
-          <div className="flex items-center gap-2 bg-white bg-opacity-20 p-3 rounded-lg shadow-md">
-            <FaCloud className="text-yellow-400 text-3xl" /> Cloud Solutions
-          </div>
-        </div>
+        <ul className="flex flex-wrap gap-4 text-lg md:text-xl font-medium text-white">
+          <li className="flex items-center gap-2 bg-white bg-opacity-20 p-3 rounded-lg shadow-md">
+            <FaLaptopCode className="text-yellow-400 text-3xl" /> Industrial Automation
+          </li>
+          <li className="flex items-center sm:text-sm gap-2 bg-white bg-opacity-20 p-3 rounded-lg shadow-md">
+            <FaMobileAlt className="text-yellow-400 text-3xl" /> MES Software
+          </li>
+          <li className="flex items-center gap-2 bg-white bg-opacity-20 p-3 rounded-lg shadow-md">
+            <FaCloud className="text-yellow-400 text-3xl" /> ERP System
+          </li>
+        </ul>
         <ul className="text-left space-y-2">
           <li className="flex items-center gap-2">
             <FaCheckCircle className="text-green-400 text-2xl" /> 4+ Years of Industry Experience
