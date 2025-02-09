@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { FaLink, FaArrowLeft, FaCheckCircle, FaTools } from 'react-icons/fa';
+import { FaLink, FaArrowLeft,FaEye,FaSyncAlt,FaRobot,FaChartLine,FaCogs,FaDatabase,FaExpandArrowsAlt,FaThumbsUp, FaCheckCircle, FaTools, FaCalendarAlt, FaClipboardList, FaMicrochip, FaSearch, FaUsers } from 'react-icons/fa';
 
 const ProjectDetails = () => {
   const { id } = useParams();
@@ -8,6 +8,16 @@ const ProjectDetails = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [id]);
+
+  // Module icons configuration
+  const moduleIcons = {
+    scheduling: <FaCalendarAlt className="text-purple-500 text-xl mr-3" />,
+    planning: <FaClipboardList className="text-blue-500 text-xl mr-3" />,
+    prond: <FaMicrochip className="text-green-500 text-xl mr-3" />,
+    recording: <FaClipboardList className="text-red-500 text-xl mr-3" />,
+    quality: <FaSearch className="text-yellow-500 text-xl mr-3" />,
+    hrms: <FaUsers className="text-pink-500 text-xl mr-3" />
+  };
 
   const projects = [
     { 
@@ -211,22 +221,71 @@ const ProjectDetails = () => {
       id: 10,
       title: 'Electrodigit',
       link: '#',
-      image: '/project/electrodigit.jpeg',
+      image: '/Eptiq clients/ELECTRODIGIT.jpeg',
       category: 'Industry 4.0',
       description: `MES solution for electronics manufacturing with component-level traceability and real-time process control. Supports high-mix/low-volume production.`,
-      techStack: ['React', 'Node.js', 'MongoDB', 'SAP API'],
-      features: [
-        '🔬 Component genealogy tracking',
-        '⚡ Real-time energy monitoring',
-        '📈 CPK process control',
-        '🔗 ERP/MES bi-directional sync',
-        '📊 Andon system integration'
+      modules: [
+        { name: 'Scheduling', description: '...' },
+        { name: 'Production Planning', description: '...' },
+        { name: 'PROND', description: '...' },
+        { name: 'Recording', description: '...' },
+        { name: 'Quality Inspection', description: '...' },
+        { name: 'HRMS', description: '...' }
       ],
+      features: [
+        {
+          icon: <FaEye className="text-blue-500 text-2xl" />,
+          title: 'Real-Time Production Monitoring',
+          description: 'MES provides real-time visibility into production activities, helping track progress, detect bottlenecks, and ensure timely delivery. Operators and managers can monitor machinery status, production rates, and downtime, which leads to faster corrective actions.'
+        },
+        {
+          icon: <FaSyncAlt className="text-blue-500 text-2xl" />,
+          title: 'Integration with Existing ERP',
+          description: 'Our MES seamlessly integrates with your current ERP system, creating a fully connected environment. This integration ensures that data flows smoothly between production lines and back-office functions, providing comprehensive insights into the manufacturing process while keeping sales, purchase, and financial operations in sync.'
+        },
+        {
+          icon: <FaRobot className="text-blue-500 text-2xl" />,
+          title: 'Process Automation',
+          description: 'Automation is a cornerstone of MES, reducing manual input and ensuring consistency in production. From raw material tracking to finished product assembly, automated workflows eliminate repetitive tasks, allowing teams to focus on value-added activities.'
+        },
+        {
+          icon: <FaCheckCircle className="text-blue-500 text-2xl" />,
+          title: 'Quality Control and Traceability',
+          description: 'MES enhances quality management by enabling real-time monitoring of product standards. Every stage of production is documented, and product quality is continuously tracked, ensuring compliance with industry standards. This helps reduce defects, improve product reliability, and ensure traceability for every unit produced.'
+        },
+        {
+          icon: <FaCalendarAlt className="text-blue-500 text-2xl" />,
+          title: 'Production Scheduling and Optimization',
+          description: 'By utilizing real-time data from both the shop floor and ERP, MES helps optimize production scheduling. This ensures efficient use of resources, minimizes downtime, and maintains optimal throughput, increasing overall manufacturing performance.'
+        }
+      ],
+    
       benefits: [
-        '🕒 40% faster NPI cycles',
-        '📉 60% rework reduction',
-        '🌱 25% energy savings',
-        '🛡️ RoHS compliance tracking'
+        {
+          icon: <FaChartLine className="text-green-500 text-2xl" />,
+          title: 'Enhanced Operational Visibility',
+          description: 'Integrating MES with your ERP system gives you a 360-degree view of your operations, from raw material procurement to finished goods, helping you make better-informed decisions.'
+        },
+        {
+          icon: <FaCogs className="text-green-500 text-2xl" />,
+          title: 'Improved Manufacturing Efficiency',
+          description: 'With real-time monitoring and automated process control, MES reduces downtime and increases throughput. The integration with ERP optimizes the entire production flow, from materials management to order fulfillment, resulting in cost savings and higher production efficiency.'
+        },
+        {
+          icon: <FaDatabase className="text-green-500 text-2xl" />,
+          title: 'Accurate Data for Business Decisions',
+          description: 'MES ensures that accurate, real-time data from the shop floor is fed into your ERP, providing better insights into production performance. This allows managers to make more informed decisions about inventory, procurement, and capacity planning, aligning manufacturing operations with broader business objectives.'
+        },
+        {
+          icon: <FaExpandArrowsAlt className="text-green-500 text-2xl" />,
+          title: 'Greater Flexibility and Scalability',
+          description: 'The MES system can be easily scaled as your business grows. As production demands increase, the system can handle more complex workflows, product lines, and customization requirements, without disrupting existing operations.'
+        },
+        {
+          icon: <FaThumbsUp className="text-green-500 text-2xl" />,
+          title: 'Improved Product Quality',
+          description: 'MES offers continuous monitoring of production quality, enabling businesses to identify and address quality issues early in the process. This integration with ERP ensures that quality standards are maintained consistently, leading to fewer defects, improved customer satisfaction, and reduced costs associated with rework.'
+        }
       ]
     },
     
@@ -356,82 +415,117 @@ const ProjectDetails = () => {
   }
 
   return (
-    <section className="min-h-screen bg-gray-100 text-gray-900 pt-24 pb-12 px-6 md:px-10">
+    <section className="min-h-screen bg-gray-100 text-gray-900 pt-24 pb-12 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden">
         
+        {/* Project Header */}
         <div className="relative">
-          <img src={project.image} alt={project.title} className="w-full h-[450px] object-cover" />
-          <div className="absolute bottom-0 left-0 w-full p-10 bg-black bg-opacity-50">
-            <h1 className="text-5xl font-bold text-white">{project.title}</h1>
-            <p className="text-lg text-white mt-2">{project.category}</p>
+          <img src={project.image} alt={project.title} className="w-full h-[300px] sm:h-[450px] object-cover" />
+          <div className="absolute bottom-0 left-0 w-full p-6 sm:p-10 bg-black bg-opacity-50">
+            <h1 className="text-3xl sm:text-5xl font-bold text-white">{project.title}</h1>
+            <p className="text-sm sm:text-lg text-white mt-2">{project.category}</p>
           </div>
         </div>
 
-        <div className="p-12">
-          <div className="flex flex-wrap md:flex-nowrap gap-10">
+        <div className="p-6 sm:p-12">
+          <div className="flex flex-col md:flex-row gap-8">
             
+            {/* Main Content */}
             <div className="w-full md:w-2/3">
-              <h2 className="text-4xl font-semibold text-blue-600 mb-6">Project Overview</h2>
-              <p className="text-lg leading-relaxed text-gray-700">{project.description}</p>
+              <h2 className="text-3xl sm:text-4xl font-semibold text-blue-600 mb-6">Project Overview</h2>
+              <p className="text-base sm:text-lg leading-relaxed text-gray-700">{project.description}</p>
 
-              <h2 className="text-3xl font-semibold text-blue-600 mt-10 mb-4">Key Features</h2>
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700">
+              {/* Key Features Section */}
+              <h2 className="text-2xl sm:text-3xl font-semibold text-blue-600 mt-8 sm:mt-10 mb-4">Key Features</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                 {project.features.map((feature, index) => (
-                  <li key={index} className="flex items-center">
-                    <FaCheckCircle className="text-green-500 mr-2" /> {feature}
-                  </li>
+                  <div key={index} className="bg-gray-50 p-4 sm:p-6 rounded-lg shadow-sm border-l-4 border-green-500">
+                    <div className="flex items-center mb-3 sm:mb-4">
+                      <div className="mr-3 sm:mr-4">
+                        {feature.icon}
+                      </div>
+                      <h3 className="text-lg sm:text-xl font-semibold text-gray-900">{feature.title}</h3>
+                    </div>
+                    <p className="text-sm sm:text-base text-gray-600">{feature.description}</p>
+                  </div>
                 ))}
-              </ul>
+              </div>
 
+              {/* Benefits Section */}
               {project.benefits && (
                 <>
-                  <h2 className="text-3xl font-semibold text-blue-600 mt-10 mb-4">
-                    {project.title} Benefits
-                  </h2>
-                  <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700">
+                  <h2 className="text-2xl sm:text-3xl font-semibold text-blue-600 mt-8 sm:mt-10 mb-4">Benefits</h2>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                     {project.benefits.map((benefit, index) => (
-                      <li key={index} className="flex items-center">
-                        <FaCheckCircle className="text-green-500 mr-2" /> {benefit}
-                      </li>
+                      <div key={index} className="bg-gray-50 p-4 sm:p-6 rounded-lg shadow-sm border-l-4 border-green-500">
+                        <div className="flex items-center mb-3 sm:mb-4">
+                          <div className="mr-3 sm:mr-4">
+                            {React.cloneElement(benefit.icon, { className: "text-blue-500 text-xl sm:text-2xl" })}
+                          </div>
+                          <h3 className="text-lg sm:text-xl font-semibold text-gray-900">{benefit.title}</h3>
+                        </div>
+                        <p className="text-sm sm:text-base text-gray-600">{benefit.description}</p>
+                      </div>
                     ))}
-                  </ul>
+                  </div>
                 </>
               )}
 
-              <div className="mt-10">
-               
-                <br />
-                      <br />
+              {/* Book Demo Button */}
+              <div className="mt-8 sm:mt-10">
                 <a
-                  href="/contactus"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center  px-6 py-3 bg-blue-600 text-white font-semibold rounded-md shadow-lg hover:bg-blue-700 transition"
+                  href="/#contactus"
+                  className="inline-flex items-center px-5 py-2 sm:px-6 sm:py-3 bg-blue-600 text-white font-semibold rounded-md shadow-lg hover:bg-blue-700 transition"
                 >
                   <FaLink className="mr-2" /> Book Demo
                 </a>
               </div>
             </div>
 
-            <div className="w-full md:w-1/3 bg-gray-50 p-6 rounded-lg shadow-md">
-              <h2 className="text-3xl font-semibold text-blue-600 mb-6 flex items-center">
-                <FaTools className="mr-2" /> Tech Stack
-              </h2>
-              <ul className="space-y-4">
-                {project.techStack.map((tech, index) => (
-                  <li key={index} className="text-lg font-medium text-gray-800 bg-white p-3 rounded-md shadow-sm border-l-4 border-blue-500">
-                    {tech}
-                  </li>
-                ))}
-              </ul>
+            {/* Sidebar - Modules or Tech Stack */}
+            <div className="w-full md:w-1/3 bg-gray-50 p-4 sm:p-6 rounded-lg shadow-md">
+              {project.modules ? (
+                <>
+                  <h2 className="text-xl sm:text-2xl font-semibold text-blue-600 mb-4 sm:mb-6 flex items-center">
+                    <FaTools className="mr-2" /> System Modules
+                  </h2>
+                  <ul className="space-y-3 sm:space-y-4">
+                    {project.modules.map((module, index) => (
+                      <li key={index} className="text-gray-700 bg-white p-3 sm:p-4 rounded-md shadow-sm">
+                        <div className="flex items-center">
+                          {moduleIcons[module.name.toLowerCase().replace(' ', '')] || <FaTools className="text-gray-500 mr-3" />}
+                          <div>
+                            <h3 className="font-medium">{module.name}</h3>
+                            <p className="text-xs sm:text-sm text-gray-600 mt-1">{module.description}</p>
+                          </div>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              ) : project.techStack ? (
+                <>
+                  <h2 className="text-xl sm:text-2xl font-semibold text-blue-600 mb-4 sm:mb-6 flex items-center">
+                    <FaTools className="mr-2" /> Tech Stack
+                  </h2>
+                  <ul className="space-y-3 sm:space-y-4">
+                    {project.techStack.map((tech, index) => (
+                      <li key={index} className="text-gray-700 bg-white p-3 rounded-md shadow-sm border-l-4 border-blue-500">
+                        {tech}
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              ) : null}
             </div>
           </div>
         </div>
 
+        {/* Back Button */}
         <div className="text-center py-6">
           <Link 
             to="/" 
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-md shadow-lg hover:bg-blue-700 transition"
+            className="inline-flex items-center px-5 py-2 sm:px-6 sm:py-3 bg-blue-600 text-white font-semibold rounded-md shadow-lg hover:bg-blue-700 transition"
           >
             <FaArrowLeft className="mr-2" /> Back to Projects
           </Link>

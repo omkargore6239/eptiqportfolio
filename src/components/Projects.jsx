@@ -35,7 +35,7 @@ function Projects() {
   }, []);
 
   const projects = [
-    { title: 'Electrodigit', link: '#', image: '/project/electrodigit.jpeg', category: 'MES', id: 10 },
+    { title: 'Electrodigit', link: '#', image: '/Eptiq clients/ELECTRODIGIT.jpeg', category: 'MES', id: 10 },
     { title: 'Matchwell Engineering', link: '#', image: '/project/matchwell.jpeg', category: 'MES', id: 11 },
     { title: 'AVS Engineering', link: '#', image: '/project/avsengineering.jpeg', category: 'MES', id: 12 },
     { title: 'Integration of OFS with ERP', link: '#', image: '/project/integrationofs.jpeg', category: 'Automation', id: 13 },
