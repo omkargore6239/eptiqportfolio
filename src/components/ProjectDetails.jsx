@@ -19,22 +19,16 @@ const ProjectDetails = () => {
       description: `A hands-on IoT learning platform offering virtual labs and real device integration. Provides certification paths in industrial automation and smart systems with enterprise-grade security and global accessibility.`,
       techStack: ['React', 'AWS IoT Core', 'Node.js', 'MongoDB Atlas'],
       features: [
-        ' 1. Extensive Course Library Offer Learning offers an extensive collection of courses in diverse fields such as technology, business, marketing, personal development, finance, design, and more. Whether you want to learn a new programming language, enhance your leadership skills, or master digital marketing, you’ll find a course tailored to your needs.',
-        ' 2. High-Quality Video Lessons The platform provides engaging video content taught by industry experts and professionals. Each lesson is structured to ensure clarity, making complex topics easy to understand. Videos are available in high-definition with captions and transcripts for a better learning experience.',
-        ' 3. Learn at Your Own Pace One of the biggest advantages of Offer Learning is that it allows self-paced learning. Unlike traditional classroom settings, you can take lessons whenever it fits your schedule. Whether you have an hour or just 15 minutes a day, you can progress at your own speed.',
-        ' 4. Live Classes & Webinars For learners who prefer interactive sessions, Offer Learning hosts live classes, Q&A sessions, and webinars where students can engage directly with instructors. These sessions offer real-time discussions, personalized guidance, and the opportunity to clarify doubts instantly.',
-        '5. Certification & Skill Recognition Upon completion of courses, learners receive certifications that are recognized by employers and institutions. These certificates add credibility to your resume and can improve job prospects in competitive industries.',
-        '6. Multi-Device Compatibility The platform is accessible on mobile, tablets, and desktop devices, making learning possible anytime and anywhere. Whether you are at home, commuting, or traveling, you can continue learning without interruption.',
-        '7. Interactive Learning Tools Learning is not just about watching videos; it requires engagement. Offer Learning incorporates quizzes, assignments, discussion forums, and peer-to-peer learning communities to enhance retention and understanding.',
-        '8. AI-Powered Course Recommendations The platform uses advanced artificial intelligence to analyze your learning habits and suggest relevant courses based on your interests and progress. This ensures that you continue learning in a structured and personalized manner.',
-        '9. Affordable Learning Options Education should not be a luxury. Offer Learning provides affordable subscription plans as well as one-time purchase options for learners. This allows access to premium education at a fraction of the cost of traditional courses.',
-        '10. Corporate Training & Upskilling Organizations can leverage Offer Learning for employee training and development. Custom training programs can be designed to help teams acquire new skills, improving workplace efficiency and innovation.',
-        ],
+        '👗 Size/color matrix management',
+        '🤖 AI-powered demand forecasting',
+        '📦 3PL integration',
+        '💸 Dynamic pricing engine'
+      ],
       benefits: [
-        '1. Learn Anytime, Anywhere – Ultimate Flexibility One of the biggest advantages of Offer Learning is the freedom to learn at your own pace. Unlike traditional classroom-based learning, where you need to follow a fixed schedule, Offer Learning allows you to study whenever and wherever you want. Whether you re a working professional, a student, or a homemaker, you can access courses at any time that fits your routine. The platform is accessible from multiple devices, including smartphones, tablets, and laptops, ensuring seamless learning on the go.',
-        '2. Access to a Vast Range of Courses Offer Learning provides an extensive library of courses across multiple disciplines, including technology, business, personal development, marketing, finance, design, health & wellness, and more. No matter what skill you want to learn or improve, you’ll find a high-quality, structured course that suits your needs. This allows you to explore new interests, enhance existing skills, or even switch careers with ease.',
-        '3. High-Quality Video Lessons for an Engaging Experience Unlike text-heavy learning materials, Offer Learning provides engaging and interactive video lessons that make learning enjoyable and easier to grasp. Courses are designed and delivered by industry experts with years of experience, ensuring that the content is practical, relevant, and up to date. The use of animations, real-world examples, case studies, and step-by-step demonstrations enhances understanding and retention.',
-        '4. Live Classes & Interactive Sessions for Real-Time Learning For learners who prefer direct interaction with instructors, Offer Learning offers live classes, Q&A sessions, and webinars. These live interactions allow students to ask questions, receive personalized guidance, and gain insights from industry experts in real-time. It’s just like attending a classroom session but with the added convenience of learning from home.'
+        '📈 30% faster stock turnover rate',
+        '🛒 15% reduction in dead stock',
+        '🌍 Multi-currency support',
+        '⏱️ Real-time inventory sync <500ms'
       ]
     },
     { 
@@ -353,7 +347,7 @@ const ProjectDetails = () => {
         <h1 className="text-5xl font-bold mb-4 text-gray-800">Project Not Found</h1>
         <Link 
           to="/" 
-          className="inline-flex items-center px-5 py-2 bg-green-600 text-white font-semibold rounded-md shadow-lg hover:bg-green-700 transition"
+          className="inline-flex items-center px-5 py-2 bg-blue-600 text-white font-semibold rounded-md shadow-lg hover:bg-blue-700 transition"
         >
           <FaArrowLeft className="mr-2" /> Back to Home
         </Link>
@@ -377,10 +371,10 @@ const ProjectDetails = () => {
           <div className="flex flex-wrap md:flex-nowrap gap-10">
             
             <div className="w-full md:w-2/3">
-              <h2 className="text-4xl font-semibold text-green-600 mb-6">Project Overview</h2>
+              <h2 className="text-4xl font-semibold text-blue-600 mb-6">Project Overview</h2>
               <p className="text-lg leading-relaxed text-gray-700">{project.description}</p>
 
-              <h2 className="text-3xl font-semibold text-green-600 mt-10 mb-4">Key Features</h2>
+              <h2 className="text-3xl font-semibold text-blue-600 mt-10 mb-4">Key Features</h2>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700">
                 {project.features.map((feature, index) => (
                   <li key={index} className="flex items-center">
@@ -391,7 +385,7 @@ const ProjectDetails = () => {
 
               {project.benefits && (
                 <>
-                  <h2 className="text-3xl font-semibold text-green-600 mt-10 mb-4">
+                  <h2 className="text-3xl font-semibold text-blue-600 mt-10 mb-4">
                     {project.title} Benefits
                   </h2>
                   <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700">
@@ -405,21 +399,14 @@ const ProjectDetails = () => {
               )}
 
               <div className="mt-10">
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center px-6 py-3 bg-green-600 text-white font-semibold rounded-md shadow-lg hover:bg-green-700 transition"
-                >
-                  <FaLink className="mr-2" /> Visit Project
-                </a>
+               
                 <br />
                       <br />
                 <a
-                  href="https://eptiq.in/"
+                  href="/contactus"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center  px-6 py-3 bg-green-600 text-white font-semibold rounded-md shadow-lg hover:bg-green-700 transition"
+                  className="inline-flex items-center  px-6 py-3 bg-blue-600 text-white font-semibold rounded-md shadow-lg hover:bg-blue-700 transition"
                 >
                   <FaLink className="mr-2" /> Book Demo
                 </a>
@@ -427,12 +414,12 @@ const ProjectDetails = () => {
             </div>
 
             <div className="w-full md:w-1/3 bg-gray-50 p-6 rounded-lg shadow-md">
-              <h2 className="text-3xl font-semibold text-green-600 mb-6 flex items-center">
+              <h2 className="text-3xl font-semibold text-blue-600 mb-6 flex items-center">
                 <FaTools className="mr-2" /> Tech Stack
               </h2>
               <ul className="space-y-4">
                 {project.techStack.map((tech, index) => (
-                  <li key={index} className="text-lg font-medium text-gray-800 bg-white p-3 rounded-md shadow-sm border-l-4 border-green-500">
+                  <li key={index} className="text-lg font-medium text-gray-800 bg-white p-3 rounded-md shadow-sm border-l-4 border-blue-500">
                     {tech}
                   </li>
                 ))}
@@ -444,9 +431,9 @@ const ProjectDetails = () => {
         <div className="text-center py-6">
           <Link 
             to="/" 
-            className="inline-flex items-center px-6 py-3 bg-green-600 text-white font-semibold rounded-md shadow-lg hover:bg-green-700 transition"
+            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-md shadow-lg hover:bg-blue-700 transition"
           >
-            <FaArrowLeft className="mr-2" /> Back to Home
+            <FaArrowLeft className="mr-2" /> Back to Projects
           </Link>
         </div>
 

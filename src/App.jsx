@@ -1,11 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header'; // Correct import
+import Header from './components/Header';
 import HeroPage from './components/HeroPage';
 import Services from './components/Services';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
 import ProjectDetails from './components/ProjectDetails';
+import ContactUs from './components/ContactUs';
 import './index.css';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         
         <main className="flex-grow">
           <Routes>
+            {/* Home Page */}
             <Route 
               path="/" 
               element={
@@ -32,7 +34,11 @@ function App() {
                 </>
               } 
             />
+            {/* Project Details Page */}
             <Route path="/projectdetails/:id" element={<ProjectDetails />} />
+
+            {/* Contact Us Page (Now a Separate Route) */}
+            <Route path="/contactus" element={<ContactUs />} />
           </Routes>
         </main>
 

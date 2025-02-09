@@ -19,6 +19,7 @@ function Header() {
         <a href="#hero" className="hover:text-gray-300 transition">Home</a>
         <a href="#projects" className="hover:text-gray-300 transition ">Projects</a>
         <a href="#services" className="hover:text-gray-300 transition">Services</a>
+        <a href="#contactus" className="hover:text-gray-300 transition">Contact us</a>
       </nav>
 
       {/* Visit Website Button (Always Visible) */}
