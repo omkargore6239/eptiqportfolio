@@ -36,20 +36,22 @@ function Projects() {
 
   const projects = [
     { title: 'Electrodigit', link: '#', image: '/Eptiq clients/ELECTRODIGIT.jpeg', category: 'MES', id: 10 },
-    { title: 'Matchwell Engineering', link: '#', image: '/project/matchwell.jpeg', category: 'MES', id: 11 },
-    { title: 'AVS Engineering', link: '#', image: '/project/avsengineering.jpeg', category: 'MES', id: 12 },
-    { title: 'Integration of OFS with ERP', link: '#', image: '/project/integrationofs.jpeg', category: 'Automation', id: 13 },
-    { title: 'Inventory Management', link: '#', image: '/project/inventorymanagement.jpeg', category: 'ERP', id: 14 },
-    { title: 'Powerica', link: '#', image: '/project/powerica.jpeg', category: 'OFS', id: 15 },
-    { title: 'Offerlearning', link: 'https://offerlearning.com/', image: '/project/offerlearning.jpeg', category: 'Commercial', id: 1 },
+    { title: 'SB Industries', link: '#', image: '/Eptiq clients/SBI.jpg', category: 'ERP', id: 16 },
+    { title: 'AVS Engineering', link: '#', image: '/Eptiq clients/AVS.png', category: 'MES', id: 12 },
+    { title: 'Cummins India', link: '#', image: '/Eptiq clients/CUMMINS.jpg', category: 'Automation', id: 13 },
+    { title: 'Global tek', link: '#', image: '/Eptiq clients/Globaltek.jpeg', category: 'MES', id: 14 },
+    { title: 'Powerica', link: '#', image: '/Eptiq clients/Powerica.jpg', category: 'OFS', id: 15 },
+    { title: 'ANTB', link: '#', image: '/Eptiq clients/ANTB.png', category: 'MES', id: 17 },
     { title: 'Padcorp', link: 'https://padcorp.shop/', image: '/project/padcorp.jpeg', category: 'Commercial', id: 2 },
     { title: 'VegoBike', link: 'https://play.google.com/store/apps/details?id=com.vegobike', image: '/project/vegobike.jpeg', category: 'Commercial', id: 3 },
+    { title: 'Matchwell Engineering', link: '#', image: '/project/matchwell.jpeg', category: 'MES', id: 11 },
     { title: 'Sasha Clothings', link: 'https://sashaclothings.in', image: '/project/sashaclothings.jpeg', category: 'Commercial', id: 4 },
     { title: 'AK Enterprises', link: 'https://akenterprisess.in', image: '/project/akenterprises.jpeg', category: 'Commercial', id: 5 },
     { title: 'Harkal Studios', link: 'https://harkalstudios.in', image: '/project/harkalstudios.jpeg', category: 'Commercial', id: 6 },
     { title: 'Pandvesdeltaforce', link: 'https://pandvesdeltaforce.com', image: '/project/pandvesdeltaforce.jpeg', category: 'Commercial', id: 7 },
     { title: 'Owlsale Windo', link: 'https://play.google.com/store/apps/details?id=com.owlsalewindo.customer', image: '/project/owlsalewindo.jpeg', category: 'Commercial', id: 8 },
     { title: 'OK Bikes', link: 'https://okbikes.eptiqos.com/', image: '/project/okbikes.jpeg', category: 'Commercial', id: 9 },
+    { title: 'Offerlearning', link: 'https://offerlearning.com/', image: '/project/offerlearning.jpeg', category: 'Commercial', id: 1 },
     ];
 
     const testimonials = [
