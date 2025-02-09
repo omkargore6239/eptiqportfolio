@@ -7,13 +7,13 @@ import rocketAnimation from '/office/rocketanimation.mp4'; // Adjust path if nee
 function Services() {
   const services = [
     { title: 'Industrial Automation', description: 'Crafting responsive and interactive websites tailored to meet unique business needs.', icon: <FaLaptopCode className="text-blue-600 text-4xl" /> },
-    { title: 'ERP System', description: 'Providing comprehensive enterprise resource planning solutions for seamless operations.', icon: <FaProjectDiagram className="text-blue-600 text-4xl" /> },
-    { title: 'Networking', description: 'Connecting businesses with experienced developers to deliver high-quality projects.', icon: <FaUserTie className="text-blue-600 text-4xl" /> },
+    { title: 'ERP Software Solution', description: 'Providing comprehensive enterprise resource planning solutions for seamless operations.', icon: <FaProjectDiagram className="text-blue-600 text-4xl" /> },
     { title: 'MES (Manufacturing Execution System)', description: 'Optimizing manufacturing workflows for increased efficiency and productivity.', icon: <FaIndustry className="text-blue-600 text-4xl" /> },
+    { title: 'Intra Networking', description: 'Enhancing seamless communication and collaboration between multiple networks for efficient business operations.', icon: <FaUserTie className="text-blue-600 text-4xl" /> },
     { title: 'Website Development', description: 'Crafting responsive and interactive websites tailored to meet unique business needs.', icon: <FaLaptopCode className="text-blue-600 text-4xl" /> },
     { title: 'Digital Marketing', description: 'Boosting your online presence with targeted marketing strategies and campaigns.', icon: <FaBullhorn className="text-blue-600 text-4xl" /> },
     { title: 'App Development', description: 'Designing user-friendly mobile applications for Android and iOS platforms.', icon: <FaMobileAlt className="text-blue-600 text-4xl" /> },
-    { title: 'Digital Marketing', description: 'Boosting your online presence with targeted marketing strategies and campaigns.', icon: <FaBullhorn className="text-blue-600 text-4xl" /> },
+    // { title: 'Digital Marketing', description: 'Boosting your online presence with targeted marketing strategies and campaigns.', icon: <FaBullhorn className="text-blue-600 text-4xl" /> },
     { title: 'Graphic Designing', description: 'Creating visually stunning graphics that effectively communicate your brand message.', icon: <FaPalette className="text-blue-600 text-4xl" /> },
   ];
 

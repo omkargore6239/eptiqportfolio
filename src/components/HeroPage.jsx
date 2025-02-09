@@ -58,7 +58,7 @@ function HeroPage() {
           <li className="flex items-center gap-2 bg-white bg-opacity-20 p-3 rounded-lg shadow-md">
             <FaLaptopCode className="text-yellow-400 text-3xl" /> Industrial Automation
           </li>
-          <li className="flex items-center sm:text-sm gap-2 bg-white bg-opacity-20 p-3 rounded-lg shadow-md">
+          <li className="flex items-center text-lg gap-2 bg-white bg-opacity-20 p-3 rounded-lg shadow-md">
             <FaMobileAlt className="text-yellow-400 text-3xl" /> MES Software
           </li>
           <li className="flex items-center gap-2 bg-white bg-opacity-20 p-3 rounded-lg shadow-md">
@@ -73,7 +73,7 @@ function HeroPage() {
             <FaCheckCircle className="text-green-400 text-2xl" /> 30+ Successful Projects Delivered
           </li>
           <li className="flex items-center gap-2">
-            <FaCheckCircle className="text-green-400 text-2xl" /> Trusted by Clients Worldwide
+            <FaCheckCircle className="text-green-400 text-2xl" /> Trusted by 70+ Clients Worldwide
           </li>
         </ul>
       </div>
