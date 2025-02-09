@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { FaLink } from 'react-icons/fa';
 import CountUp from 'react-countup';
@@ -10,6 +10,29 @@ import { Pagination, Autoplay } from 'swiper/modules';
 
 function Projects() {
   const [activeCategory, setActiveCategory] = useState('All');
+  const [startCounter, setStartCounter] = useState(false);
+  const counterRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setStartCounter(true);
+        }
+      },
+      { threshold: 0.5 } // Counter starts when 50% of the section is visible
+    );
+
+    if (counterRef.current) {
+      observer.observe(counterRef.current);
+    }
+
+    return () => {
+      if (counterRef.current) {
+        observer.unobserve(counterRef.current);
+      }
+    };
+  }, []);
 
   const projects = [
     { title: 'Electrodigit', link: '#', image: '/project/electrodigit.jpeg', category: 'MES', id: 10 },
@@ -44,7 +67,7 @@ function Projects() {
           Our Projects
         </h2>
 
-        <div className="flex flex-wrap justify-center gap-8 my-8">
+        <div ref={counterRef} className="flex flex-wrap justify-center gap-8 my-8">
           {[
             { label: 'Total Projects', end: 30 },
             { label: 'Total Clients', end: 70 },
@@ -57,7 +80,7 @@ function Projects() {
               <div className="absolute w-full h-full border-4 border-blue-300 rounded-full animate-spin-slow"></div>
               <div className="text-center z-10">
                 <h3 className="text-4xl font-bold text-blue-600">
-                  <CountUp end={item.end} duration={3} />+
+                  {startCounter ? <CountUp end={item.end} duration={3} /> : 0}+
                 </h3>
                 <p className="text-lg text-gray-800">{item.label}</p>
               </div>
