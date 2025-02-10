@@ -39,7 +39,10 @@ import {
   FaMapMarkerAlt,  
   FaCloudSun,  
   FaUserShield, 
-  FaSmile 
+  FaSmile,
+  FaChartPie,
+  FaDollarSign,
+  FaWarehouse,
 } from 'react-icons/fa';
 
 const ProjectDetails = () => {
@@ -474,71 +477,72 @@ const ProjectDetails = () => {
       title: 'AVS Engineering',
       link: 'https://avsengineering.in',
       image: '/project/AVS-ERP.jpg',
-      category: 'Smart Manufacturing',
-      description: `Comprehensive MES solutions for automotive suppliers enabling real-time production control and quality assurance systems.`,
+      category: 'Enterprise Resource Planning',
+      description: `Comprehensive ERP solutions designed for manufacturing and supply chain industries, streamlining business operations, financial management, and resource planning.`,
       modules: [
-        { name: 'Scheduling', description: 'Dynamic production scheduling with real-time capacity adjustments' },
-        { name: 'Production Planning', description: 'End-to-end planning from material allocation to output optimization' },
-        { name: 'PROND', description: 'Production recording and operational data analysis' },
-        { name: 'Recording', description: 'Comprehensive manufacturing process documentation' },
-        { name: 'Quality Inspection', description: 'In-line statistical process control with real-time alerts' },
-        { name: 'HRMS', description: 'Workforce management with skill-based task allocation' }
+        { name: 'Finance Management', description: 'Integrated financial tracking, budgeting, and real-time expense monitoring' },
+        { name: 'Inventory Control', description: 'Automated stock management with demand forecasting' },
+        { name: 'Procurement', description: 'End-to-end vendor and purchase order management' },
+        { name: 'HRMS', description: 'Employee records, payroll processing, and attendance tracking' },
+        { name: 'Customer Relationship Management (CRM)', description: 'Centralized customer interactions and sales tracking' },
+        { name: 'Supply Chain Management', description: 'Optimized logistics, warehousing, and distribution planning' }
       ],
       features: [
         {
-          icon: <FaEye className="text-blue-500 text-2xl" />,
-          title: 'Real-Time Shop Floor Monitoring',
-          description: 'Continuous visibility into manufacturing operations enables progress tracking, bottleneck detection, and deadline assurance. Operators monitor equipment status and production metrics for immediate interventions.'
+          icon: <FaDatabase className="text-blue-500 text-2xl" />, 
+          title: 'Centralized Data Management',
+          description: 'A unified ERP system consolidates data across departments, ensuring real-time access to critical business insights.'
         },
         {
           icon: <FaSyncAlt className="text-blue-500 text-2xl" />,
-          title: 'MES-ERP Integration',
-          description: 'Seamless bidirectional integration with enterprise systems ensures smooth data flow between production execution and business operations, maintaining financial and operational alignment.'
+          title: 'Seamless System Integration',
+          description: 'ERP integrates seamlessly with third-party applications, reducing manual data entry and improving accuracy.'
         },
         {
-          icon: <FaRobot className="text-blue-500 text-2xl" />,
-          title: 'Automated Workflows',
-          description: 'MES-driven automation reduces manual interventions from material tracking to final assembly, ensuring process consistency while enabling focus on value-adding activities.'
+          icon: <FaCogs className="text-blue-500 text-2xl" />,
+          title: 'Automated Business Processes',
+          description: 'Automates key business operations, minimizing errors and enhancing efficiency across finance, HR, and logistics.'
         },
         {
-          icon: <FaCheckCircle className="text-blue-500 text-2xl" />,
-          title: 'Quality Assurance System',
-          description: 'Real-time product standards monitoring with complete production stage documentation ensures compliance and enables defect reduction through continuous quality tracking.'
+          icon: <FaChartLine className="text-blue-500 text-2xl" />,
+          title: 'Real-Time Analytics & Reporting',
+          description: 'Gain actionable insights through customizable reports and dashboards, improving decision-making and forecasting accuracy.'
         },
         {
-          icon: <FaCalendarAlt className="text-blue-500 text-2xl" />,
-          title: 'Optimized Production Scheduling',
-          description: 'Data-driven scheduling combines real-time shop floor insights with ERP inputs to maximize resource utilization and minimize downtime while maintaining optimal output.'
+          icon: <FaShieldAlt className="text-blue-500 text-2xl" />,
+          title: 'Robust Security & Compliance',
+          description: 'Advanced role-based access controls and compliance tracking ensure data security and regulatory adherence.'
         }
       ],
       benefits: [
         {
-          icon: <FaChartLine className="text-blue-500 text-2xl" />,
-          title: '360° Operational Visibility',
-          description: 'MES integration provides complete manufacturing transparency from raw materials to finished goods, enabling data-driven decision making across operations.'
+          icon: <FaChartPie className="text-blue-500 text-2xl" />,
+          title: 'Enhanced Operational Efficiency',
+          description: 'ERP streamlines business workflows, reducing redundancies and optimizing resource utilization.'
         },
         {
-          icon: <FaCogs className="text-blue-500 text-2xl" />,
-          title: 'Enhanced Production Efficiency',
-          description: 'Real-time monitoring and automated controls reduce downtime by 35% while increasing throughput through optimized material and workflow management.'
+          icon: <FaDollarSign className="text-blue-500 text-2xl" />,
+          title: 'Cost Reduction & Budget Control',
+          description: 'Improved financial management and forecasting help businesses cut unnecessary costs and maintain profitability.'
         },
         {
-          icon: <FaDatabase className="text-blue-500 text-2xl" />,
-          title: 'Data-Driven Decision Making',
-          description: 'MES delivers accurate shop floor data to ERP systems, enabling informed decisions about inventory optimization and production capacity planning.'
+          icon: <FaUsers className="text-blue-500 text-2xl" />,
+          title: 'Improved Workforce Productivity',
+          description: 'Automated processes free up employees from repetitive tasks, allowing them to focus on high-value activities.'
         },
         {
-          icon: <FaExpandArrowsAlt className="text-blue-500 text-2xl" />,
-          title: 'Scalable Manufacturing Solutions',
-          description: 'Modular MES architecture supports business growth through adaptable workflows and expanded product lines without operational disruption.'
+          icon: <FaWarehouse className="text-blue-500 text-2xl" />,
+          title: 'Optimized Inventory & Supply Chain',
+          description: 'Real-time inventory tracking and demand planning ensure efficient supply chain operations.'
         },
         {
           icon: <FaThumbsUp className="text-blue-500 text-2xl" />,
-          title: 'Quality Excellence',
-          description: 'Continuous MES monitoring reduces defects by 40% through early quality issue detection while ensuring compliance and traceability standards.'
+          title: 'Scalability & Flexibility',
+          description: 'Modular ERP design supports business expansion, adapting to new processes and evolving market demands.'
         }
       ]
-    },
+    }
+,
     { 
       id: 13,
       title: 'Cummins',

@@ -73,7 +73,8 @@ function Projects() {
           {[
             { label: 'Total Projects', end: 30 },
             { label: 'Total Clients', end: 70 },
-            { label: 'Years of Experience', end: 4 },
+            { label: (<span>Years<br />of Experience</span>), end: 4 }
+
           ].map((item, index) => (
             <div
               key={index}

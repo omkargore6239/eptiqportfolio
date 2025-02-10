@@ -60,15 +60,15 @@ function ContactUs() {
       <div className="mt-12 w-full max-w-4xl flex flex-col md:flex-row justify-between items-center text-white">
         <div className="flex items-center gap-4 mb-4 md:mb-0">
           <FaPhoneAlt className="text-white text-2xl" />
-          <p>+91 98765 43210</p>
+          <p>+91 9545887885</p>
         </div>
         <div className="flex items-center gap-4 mb-4 md:mb-0">
           <FaEnvelope className="text-white text-2xl" />
-          <p>contact@yourcompany.com</p>
+          <p>info@eptiq.in</p>
         </div>
         <div className="flex items-center gap-4">
           <FaMapMarkerAlt className="text-white text-2xl" />
-          <p>Pune, Maharashtra, India</p>
+          <p>Wakad, Pune Maharashtra, India</p>
         </div>
       </div>
 
