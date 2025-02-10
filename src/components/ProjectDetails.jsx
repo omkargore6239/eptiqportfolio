@@ -1,6 +1,46 @@
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { FaLink, FaArrowLeft,FaEye,FaSyncAlt,FaRobot,FaChartLine,FaCogs,FaDatabase,FaExpandArrowsAlt,FaThumbsUp, FaCheckCircle, FaTools, FaCalendarAlt, FaClipboardList, FaMicrochip, FaSearch, FaUsers } from 'react-icons/fa';
+import { 
+  FaLink, 
+  FaArrowLeft,
+  FaEye,
+  FaSyncAlt,
+  FaRobot,
+  FaChartLine,      // Single instance (was duplicate)
+  FaCogs,
+  FaDatabase,
+  FaExpandArrowsAlt,
+  FaThumbsUp,
+  FaPaperPlane,
+  FaRoute,
+  FaUsersCog,
+  FaShieldAlt,      // Single instance (was duplicate)
+  FaUserClock,
+  FaCube,
+  FaClock,
+  FaCheckDouble,
+  FaHardHat,
+  FaCheckCircle,
+  FaTools,
+  FaCalendarAlt,
+  FaClipboardList,
+  FaMicrochip,
+  FaSearch,
+  FaUsers,
+  FaPlug,
+  FaLeaf,
+  FaSolarPanel,
+  FaFileInvoiceDollar,
+  FaMoneyBillWave,
+  FaGlobeEurope,
+  FaTachometerAlt,
+  FaBatteryFull,
+  FaExpandAlt,
+  FaMapMarkerAlt,  
+  FaCloudSun,  
+  FaUserShield, 
+  FaSmile 
+} from 'react-icons/fa';
 
 const ProjectDetails = () => {
   const { id } = useParams();
@@ -46,21 +86,79 @@ const ProjectDetails = () => {
       title: 'Padcorp',
       link: 'https://padcorp.shop/',
       image: '/project/padcorp.jpeg',
-      category: 'Retail ERP',
-      description: `Omnichannel retail management system unifying POS, e-commerce, and warehouse operations with AI-driven inventory forecasting and automated replenishment.`,
-      techStack: ['Angular', 'Laravel', 'MySQL', 'Redis'],
+      category: 'Agri-Tech Retail',
+      description: `Farm equipment marketplace with integrated ERP solutions for agricultural machinery sales, financing, and maintenance. Supports precision farming integration and equipment lifecycle management.`,
+      modules: [
+        { name: 'Equipment Financing', description: 'Integrated loan/lease management with partner banks and MFIs' },
+        { name: 'Precision Farming Hub', description: 'IoT integration for tractor GPS and harvest monitoring systems' },
+        { name: 'Maintenance Scheduling', description: 'Predictive service planning based on equipment usage analytics' },
+        { name: 'Parts Inventory', description: 'AI-powered spare parts demand forecasting' },
+        { name: 'Dealer Network', description: 'Multi-tier distribution management for rural outreach' },
+        { name: 'Warranty Tracker', description: 'Blockchain-based equipment service history ledger' }
+      ],
       features: [
-        '1. Wide Range of Agricultural Equipment PadCorp offers a comprehensive catalog of farming equipment, including tractors, irrigation systems, plows, harvesters, seeders, fertilizers, pesticides, and more. Farmers can explore a variety of options from leading brands to choose the best tools for their specific needs.',
-        '👗 Size/color matrix management',
-        '🤖 AI-powered demand forecasting',
-        '📦 3PL integration',
-        '💸 Dynamic pricing engine'
+        {
+          icon: <FaTools className="text-blue-500 text-2xl" />,
+          title: 'Smart Equipment Catalog',
+          description: 'AI-powered recommendation engine suggests machinery based on farm size, crop type, and soil conditions. Includes 3D equipment previews and comparative specs analysis.'
+        },
+        {
+          icon: <FaMoneyBillWave className="text-blue-500 text-2xl" />,
+          title: 'Flexi-Financing Solutions',
+          description: 'Integrated crop-cycle aligned repayment plans with automatic harvest income deductions. Supports government subsidy management and collateral-free microloans.'
+        },
+        {
+          icon: <FaCogs className="text-blue-500 text-2xl" />,
+          title: 'Precision Farming Integration',
+          description: 'Connect farm equipment to soil sensors and weather APIs. Auto-advertise compatible implements based on farmers\' existing machinery and crop patterns.'
+        },
+        {
+          icon: <FaClipboardList className="text-blue-500 text-2xl" />,
+          title: 'Predictive Parts Inventory',
+          description: 'ML-driven spare parts forecasting using equipment telemetry data. Maintain optimal stock levels across rural service centers with drone-assisted delivery routing.'
+        },
+        {
+          icon: <FaLeaf className="text-blue-500 text-2xl" />,
+          title: 'Crop-Centric Equipment Packages',
+          description: 'Pre-configured machinery bundles for specific crops (e.g., rice transplanters + harvesters + dryers). Includes ROI calculators based on regional yield averages.'
+        },
+        {
+          icon: <FaShieldAlt className="text-blue-500 text-2xl" />,
+          title: 'Digital Service Records',
+          description: 'Blockchain-maintained maintenance history for resale value preservation. Automatic warranty claims processing with IoT-verified equipment usage data.'
+        }
       ],
       benefits: [
-        '📈 30% faster stock turnover rate',
-        '🛒 15% reduction in dead stock',
-        '🌍 Multi-currency support',
-        '⏱️ Real-time inventory sync <500ms'
+        {
+          icon: <FaTachometerAlt className="text-blue-500 text-2xl" />,
+          title: '40% Faster Farm Mechanization',
+          description: 'End-to-end equipment acquisition process from selection to financing completed in 72 hours versus traditional 3-week cycles'
+        },
+        {
+          icon: <FaClock className="text-blue-500 text-2xl" />,
+          title: '60% Reduced Downtime',
+          description: 'Predictive maintenance alerts and rural service networks ensure equipment availability during critical farming windows'
+        },
+        {
+          icon: <FaChartLine className="text-blue-500 text-2xl" />,
+          title: '30% Higher Crop Yield',
+          description: 'Precision farming packages optimized for local conditions increase production efficiency and resource utilization'
+        },
+        {
+          icon: <FaExpandAlt className="text-blue-500 text-2xl" />,
+          title: '5-Year Equipment Lifespan',
+          description: 'AI-maintained service schedules and genuine parts availability extend machinery operational life'
+        },
+        {
+          icon: <FaUsers className="text-blue-500 text-2xl" />,
+          title: 'Pan-India Rural Network',
+          description: '15,000+ village-level service points with regional equipment customization (e.g., narrow-track tractors for hilly terrain)'
+        },
+        {
+          icon: <FaCheckCircle className="text-blue-500 text-2xl" />,
+          title: 'Govt. Compliance Ready',
+          description: 'Automated FPO (Farmer Producer Organization) documentation and subsidy claim processing'
+        }
       ]
     },
     { 
@@ -69,20 +167,78 @@ const ProjectDetails = () => {
       link: 'https://play.google.com/store/apps/details?id=com.vegobike',
       image: '/project/vegobike.jpeg',
       category: 'Smart Mobility',
-      description: `IoT-enabled bike sharing platform with integrated e-bike support. Features predictive maintenance, geofencing, and multimodal transport integration for urban mobility.`,
-      techStack: ['Flutter', 'Firebase RTDB', 'Node.js', 'Google Maps API'],
+      description: `AI-powered bike-sharing platform with IoT-enabled e-bikes, predictive maintenance, and seamless integration with public transit systems for urban last-mile connectivity.`, 
+      modules: [
+        { name: 'Ride Planning', description: 'Multi-modal trip planning with real-time bike availability and public transit schedules' },
+        { name: 'Bike Health Monitoring', description: 'IoT sensors track battery health, tire pressure, and brake conditions for predictive maintenance' },
+        { name: 'Dynamic Pricing', description: 'AI-driven fare adjustments based on demand, weather, and traffic conditions' },
+        { name: 'User Safety', description: 'Real-time crash detection and emergency SOS alerts with GPS tracking' },
+        { name: 'Fleet Management', description: 'Automated bike redistribution using demand heatmaps and AI optimization' },
+        { name: 'Sustainability Dashboard', description: 'Track carbon savings and environmental impact for riders and cities' }
+      ],
       features: [
-        '🗺️ Live heatmap of bike availability',
-        '🔋 Battery status monitoring',
-        '📱 Mobile wallet integration',
-        '👮♂️ Anti-theft geofencing',
-        '🌧️ Weather-based demand prediction'
+        {
+          icon: <FaMapMarkerAlt className="text-blue-500 text-2xl" />,
+          title: 'Real-Time Bike Heatmaps',
+          description: 'Interactive maps showing bike availability, parking zones, and high-demand areas. Integrates with public transit stops for seamless last-mile connectivity.'
+        },
+        {
+          icon: <FaBatteryFull className="text-blue-500 text-2xl" />,
+          title: 'Smart Battery Management',
+          description: 'E-bike battery status tracking with predictive charging alerts. Auto-route riders to nearest charging docks when battery is low.'
+        },
+        {
+          icon: <FaShieldAlt className="text-blue-500 text-2xl" />,
+          title: 'Anti-Theft Geofencing',
+          description: 'Geo-boundaries trigger alarms and disable bikes if moved outside approved zones. Real-time tracking aids recovery of stolen bikes.'
+        },
+        {
+          icon: <FaChartLine className="text-blue-500 text-2xl" />,
+          title: 'AI-Powered Fleet Optimization',
+          description: 'Predictive algorithms redistribute bikes based on historical usage patterns, weather forecasts, and special events.'
+        },
+        {
+          icon: <FaUsers className="text-blue-500 text-2xl" />,
+          title: 'Group Ride Modes',
+          description: 'Social features for group rides with shared routes, leaderboards, and carbon-saving competitions.'
+        },
+        {
+          icon: <FaCloudSun className="text-blue-500 text-2xl" />,
+          title: 'Weather-Adaptive Routing',
+          description: 'Auto-suggest safer routes during rain or snow, with real-time alerts for slippery conditions.'
+        }
       ],
       benefits: [
-        '🚲 40% reduction in short car trips',
-        '📉 25% lower maintenance costs',
-        '🌱 15-ton monthly carbon offset',
-        '🛡️ 99.9% fraud prevention rate'
+        {
+          icon: <FaLeaf className="text-blue-500 text-2xl" />,
+          title: '20-Ton Monthly Carbon Offset',
+          description: 'Replace short car trips with e-bike rides, reducing urban emissions and traffic congestion.'
+        },
+        {
+          icon: <FaMoneyBillWave className="text-blue-500 text-2xl" />,
+          title: '30% Lower Operational Costs',
+          description: 'Predictive maintenance and optimized fleet routing reduce bike downtime and servicing expenses.'
+        },
+        {
+          icon: <FaClock className="text-blue-500 text-2xl" />,
+          title: '50% Faster Last-Mile Connectivity',
+          description: 'Seamless integration with buses and metros ensures faster commutes compared to walking or taxis.'
+        },
+        {
+          icon: <FaUserShield className="text-blue-500 text-2xl" />,
+          title: '99.9% Ride Safety',
+          description: 'Crash detection, emergency alerts, and real-time rider tracking ensure safe urban mobility.'
+        },
+        {
+          icon: <FaExpandAlt className="text-blue-500 text-2xl" />,
+          title: 'City-Wide Scalability',
+          description: 'Modular system supports 10,000+ bikes across multiple zones, with dynamic pricing for demand balancing.'
+        },
+        {
+          icon: <FaSmile className="text-blue-500 text-2xl" />,
+          title: 'Enhanced Rider Experience',
+          description: 'Personalized ride recommendations, rewards for frequent users, and gamified challenges boost engagement.'
+        }
       ]
     },
     { 
@@ -225,12 +381,12 @@ const ProjectDetails = () => {
       category: 'Industry 4.0',
       description: `MES solution for electronics manufacturing with component-level traceability and real-time process control. Supports high-mix/low-volume production.`,
       modules: [
-        { name: 'Scheduling', description: '...' },
-        { name: 'Production Planning', description: '...' },
-        { name: 'PROND', description: '...' },
-        { name: 'Recording', description: '...' },
-        { name: 'Quality Inspection', description: '...' },
-        { name: 'HRMS', description: '...' }
+        { name: 'Scheduling', description:  '' },
+        { name: 'Production Planning', description:  '' },
+        { name: 'PROND', description:  '' },
+        { name: 'Recording', description:  '' },
+        { name: 'Quality Inspection', description:  '' },
+        { name: 'HRMS', description:  '' }
       ],
       features: [
         {
@@ -316,92 +472,319 @@ const ProjectDetails = () => {
     { 
       id: 12,
       title: 'AVS Engineering',
-      link: 'https://avsengineering.in',  // Updated live link
+      link: 'https://avsengineering.in',
       image: '/project/AVS-ERP.jpg',
       category: 'Smart Manufacturing',
-      description: `End-to-end MES solutions for automotive suppliers with real-time production tracking and quality management systems.`,
+      description: `Comprehensive MES solutions for automotive suppliers enabling real-time production control and quality assurance systems.`,
       modules: [
-        { name: 'Scheduling' },
-        { name: 'Production Planning' },
-        { name: 'PROND'},
-        { name: 'Recording'},
-        { name: 'Quality Inspection'},
-        { name: 'HRMS'}
+        { name: 'Scheduling', description: 'Dynamic production scheduling with real-time capacity adjustments' },
+        { name: 'Production Planning', description: 'End-to-end planning from material allocation to output optimization' },
+        { name: 'PROND', description: 'Production recording and operational data analysis' },
+        { name: 'Recording', description: 'Comprehensive manufacturing process documentation' },
+        { name: 'Quality Inspection', description: 'In-line statistical process control with real-time alerts' },
+        { name: 'HRMS', description: 'Workforce management with skill-based task allocation' }
       ],
       features: [
-        '🚗 Automotive SPICE compliance',
-        '📊 Real-time OEE dashboards',
-        '🔍 Defect pattern analysis',
-        '📦 Smart inventory management'
+        {
+          icon: <FaEye className="text-blue-500 text-2xl" />,
+          title: 'Real-Time Shop Floor Monitoring',
+          description: 'Continuous visibility into manufacturing operations enables progress tracking, bottleneck detection, and deadline assurance. Operators monitor equipment status and production metrics for immediate interventions.'
+        },
+        {
+          icon: <FaSyncAlt className="text-blue-500 text-2xl" />,
+          title: 'MES-ERP Integration',
+          description: 'Seamless bidirectional integration with enterprise systems ensures smooth data flow between production execution and business operations, maintaining financial and operational alignment.'
+        },
+        {
+          icon: <FaRobot className="text-blue-500 text-2xl" />,
+          title: 'Automated Workflows',
+          description: 'MES-driven automation reduces manual interventions from material tracking to final assembly, ensuring process consistency while enabling focus on value-adding activities.'
+        },
+        {
+          icon: <FaCheckCircle className="text-blue-500 text-2xl" />,
+          title: 'Quality Assurance System',
+          description: 'Real-time product standards monitoring with complete production stage documentation ensures compliance and enables defect reduction through continuous quality tracking.'
+        },
+        {
+          icon: <FaCalendarAlt className="text-blue-500 text-2xl" />,
+          title: 'Optimized Production Scheduling',
+          description: 'Data-driven scheduling combines real-time shop floor insights with ERP inputs to maximize resource utilization and minimize downtime while maintaining optimal output.'
+        }
       ],
       benefits: [
-        '📈 20% improvement in OEE',
-        '🛡️ Zero recall incidents',
-        '⏱️ 35% faster audit compliance',
-        '🌐 Multi-tier supplier integration'
+        {
+          icon: <FaChartLine className="text-blue-500 text-2xl" />,
+          title: '360° Operational Visibility',
+          description: 'MES integration provides complete manufacturing transparency from raw materials to finished goods, enabling data-driven decision making across operations.'
+        },
+        {
+          icon: <FaCogs className="text-blue-500 text-2xl" />,
+          title: 'Enhanced Production Efficiency',
+          description: 'Real-time monitoring and automated controls reduce downtime by 35% while increasing throughput through optimized material and workflow management.'
+        },
+        {
+          icon: <FaDatabase className="text-blue-500 text-2xl" />,
+          title: 'Data-Driven Decision Making',
+          description: 'MES delivers accurate shop floor data to ERP systems, enabling informed decisions about inventory optimization and production capacity planning.'
+        },
+        {
+          icon: <FaExpandArrowsAlt className="text-blue-500 text-2xl" />,
+          title: 'Scalable Manufacturing Solutions',
+          description: 'Modular MES architecture supports business growth through adaptable workflows and expanded product lines without operational disruption.'
+        },
+        {
+          icon: <FaThumbsUp className="text-blue-500 text-2xl" />,
+          title: 'Quality Excellence',
+          description: 'Continuous MES monitoring reduces defects by 40% through early quality issue detection while ensuring compliance and traceability standards.'
+        }
       ]
     },
     { 
       id: 13,
-      title: 'OFS-ERP Integration',
-      link: 'https://integration.ofserp.com',  // Updated live link
-      image: '/project/integrationofs.jpeg',
+      title: 'Cummins',
+      link: '#',  // Updated live link
+      image: '/Eptiq clients/CUMMINS.jpg',
       category: 'Supply Chain Tech',
-      description: `Seamless integration platform connecting Order Fulfillment Systems with ERP solutions for real-time supply chain visibility.`,
-      techStack: ['Spring Boot', 'Kafka', 'PostgreSQL', 'React'],
+      description: `Seamless integration platform connecting Order Fulfillment Systems with ERP solutions for real-time supply chain visibility.`, 
+      modules: [
+        { name: 'Scheduling', description:  '' },
+        { name: 'Production Planning', description:  '' },
+        { name: 'PROND', description:  '' },
+        { name: 'Recording', description:  '' },
+        { name: 'Quality Inspection', description:  '' },
+        { name: 'HRMS', description:  '' }
+      ],
       features: [
-        '📦 End-to-end order tracking',
-        '📈 Demand forecasting AI',
-        '🚚 Carrier integration',
-        '💰 Dynamic pricing engine'
+        {
+          icon: <FaEye className="text-blue-500 text-2xl" />,
+          title: 'Real-Time Order Tracking',
+          description: 'Gain real-time visibility into order status, from placement to fulfillment. Track orders across the supply chain, ensuring timely delivery and reducing delays.'
+        },
+        {
+          icon: <FaSyncAlt className="text-blue-500 text-2xl" />,
+          title: 'ERP-OFS Synchronization',
+          description: 'Seamlessly integrate ERP and OFS to ensure data consistency across systems. Automate data flow between order management, inventory, and financial systems for accurate and up-to-date information.'
+        },
+        {
+          icon: <FaRobot className="text-blue-500 text-2xl" />,
+          title: 'Automated Order Processing',
+          description: 'Automate order entry, validation, and fulfillment processes. Reduce manual errors and improve efficiency by streamlining workflows between ERP and OFS.'
+        },
+        {
+          icon: <FaCheckCircle className="text-blue-500 text-2xl" />,
+          title: 'Inventory Optimization',
+          description: 'Leverage real-time inventory data from ERP and OFS to optimize stock levels. Avoid overstocking or stockouts, and ensure materials are available for production and order fulfillment.'
+        },
+        // {
+        //   icon: <FaCalendarAlt className="text-blue-500 text-2xl" />,
+        //   title: 'Demand Forecasting',
+        //   description: 'Use integrated data from ERP and OFS to predict demand accurately. Improve production planning and inventory management to meet customer needs efficiently.'
+        // }
       ],
       benefits: [
-        '📉 30% inventory carrying cost reduction',
-        '🚀 2-day faster order fulfillment',
-        '📊 Unified supply chain analytics',
-        '🔗 50+ ERP connectors'
+        {
+          icon: <FaChartLine className="text-blue-500 text-2xl" />,
+          title: 'End-to-End Supply Chain Visibility',
+          description: 'Achieve complete visibility across the supply chain, from order placement to delivery. Make data-driven decisions to enhance operational efficiency and customer satisfaction.'
+        },
+        {
+          icon: <FaCogs className="text-blue-500 text-2xl" />,
+          title: 'Streamlined Operations',
+          description: 'Integrate ERP and OFS to eliminate silos and streamline operations. Reduce manual effort, improve accuracy, and accelerate order fulfillment processes.'
+        },
+        {
+          icon: <FaDatabase className="text-blue-500 text-2xl" />,
+          title: 'Data-Driven Decision Making',
+          description: 'Access real-time data from ERP and OFS to make informed decisions. Improve forecasting, inventory management, and production planning with accurate insights.'
+        },
+        {
+          icon: <FaExpandArrowsAlt className="text-blue-500 text-2xl" />,
+          title: 'Scalable and Flexible Solutions',
+          description: 'The integrated ERP-OFS platform is designed to scale with your business. Adapt to changing demands and expand operations without disrupting existing workflows.'
+        },
+        // {
+        //   icon: <FaThumbsUp className="text-blue-500 text-2xl" />,
+        //   title: 'Enhanced Customer Satisfaction',
+        //   description: 'Deliver orders faster and more accurately with real-time tracking and optimized processes. Improve customer satisfaction by meeting delivery commitments consistently.'
+        // }
       ]
     },
     { 
       id: 14,
-      title: 'Smart Inventory Pro',
-      link: 'https://smartinventorypro.com',  // Updated live link
-      image: '/project/inventorymanagement.jpeg',
+      title: 'Global Tek',
+      link: '#',  
+      image: '/Eptiq clients/Globaltek.jpeg',
       category: 'Warehouse Tech',
-      description: `AI-powered inventory management system with RFID tracking and drone-based stock verification for large warehouses.`,
-      techStack: ['Vue.js', 'Python', 'MongoDB', 'IoT'],
+      description: `Robotics-driven automation system for warehouses, combining autonomous mobile robots (AMRs), drone swarms, and AI to optimize inventory handling and logistics.`, 
+      modules: [
+        { name: 'Fleet Control', description: 'Centralized management of robot fleets for task allocation and coordination' },
+        { name: 'Path Optimization', description: 'AI-driven route planning for robots and drones to minimize travel time' },
+        { name: 'Inventory Robotics', description: 'Integration of robotic pickers, sorters, and palletizers with warehouse workflows' },
+        { name: 'Predictive Maintenance', description: 'AI-powered health monitoring for robotic systems to prevent downtime' },
+        { name: 'Safety Protocols', description: 'Collision avoidance and emergency response systems for human-robot collaboration' },
+        { name: 'Integration Gateway', description: 'Seamless connectivity with WMS, ERP, and legacy warehouse systems' }
+      ],
       features: [
-        '📡 RFID real-time tracking',
-        '🚁 Automated drone audits',
-        '📦 Cross-docking optimization',
-        '🌡️ Climate-controlled zone mgmt'
+        {
+          icon: <FaRobot className="text-blue-500 text-2xl" />,
+          title: 'Autonomous Mobile Robots (AMRs)',
+          description: 'Self-navigating robots for goods transportation, equipped with LiDAR and computer vision for dynamic environment adaptation. Operate 24/7 with automatic charging and load balancing.'
+        },
+        {
+          icon: <FaPaperPlane className="text-blue-500 text-2xl" />,
+          title: 'Drone Inventory Scanning',
+          description: 'Autonomous drone fleets for aerial stock verification in high racks, using RFID and barcode scanning. Conduct 3D mapping and cycle counts 10x faster than manual processes.'
+        },
+        {
+          icon: <FaRoute className="text-blue-500 text-2xl" />,
+          title: 'Dynamic Path Planning',
+          description: 'Real-time traffic management for robots using machine learning. Automatically reroute systems avoid congestion and prioritize urgent orders during peak operations.'
+        },
+        {
+          icon: <FaUsersCog className="text-blue-500 text-2xl" />,
+          title: 'Swarm Coordination',
+          description: 'Collaborative multi-robot workflows for pallet building and order consolidation. Synchronized robots share workload based on proximity and battery status.'
+        },
+        {
+          icon: <FaShieldAlt className="text-blue-500 text-2xl" />,
+          title: 'Collision Avoidance',
+          description: '3D spatial awareness system using IoT sensors and thermal imaging. Robots automatically freeze or redirect when humans enter restricted zones.'
+        },
+        {
+          icon: <FaSyncAlt className="text-blue-500 text-2xl" />,
+          title: 'Real-Time Inventory Sync',
+          description: 'Instant WMS updates via robot-collected data, with blockchain-backed audit trails for high-value inventory. Integrates with ERP for automated reordering.'
+        }
       ],
       benefits: [
-        '📈 99.9% inventory accuracy',
-        '📉 60% reduced shrinkage',
-        '⏱️ 5x faster stock checks',
-        '🌍 Multi-warehouse sync'
+        {
+          icon: <FaUserClock className="text-blue-500 text-2xl" />,
+          title: '70% Labor Productivity Boost',
+          description: 'Robots handle repetitive tasks while staff focuses on exception management and process improvement.'
+        },
+        {
+          icon: <FaCube className="text-blue-500 text-2xl" />,
+          title: '3D Space Utilization',
+          description: 'Automated vertical storage and retrieval enables 40% better cube utilization compared to traditional shelving.'
+        },
+        {
+          icon: <FaClock className="text-blue-500 text-2xl" />,
+          title: '24/7 Operations',
+          description: 'Lights-out automation capabilities for continuous order fulfillment without human supervision.'
+        },
+        {
+          icon: <FaCheckDouble className="text-blue-500 text-2xl" />,
+          title: '99.99% Inventory Accuracy',
+          description: 'Robotic scanning eliminates human counting errors, with discrepancy alerts resolved in <15 minutes.'
+        },
+        {
+          icon: <FaExpandArrowsAlt className="text-blue-500 text-2xl" />,
+          title: 'Elastic Scalability',
+          description: 'Modular robot fleets expand capacity for peak seasons. Add/remove units without infrastructure changes.'
+        },
+        {
+          icon: <FaHardHat className="text-blue-500 text-2xl" />,
+          title: 'Zero Incident Safety',
+          description: 'ISO 3691-4 compliant systems with emergency stop compliance and air quality monitoring in robotic zones.'
+        }
       ]
     },
     { 
       id: 15,
       title: 'Powerica Solutions',
-      link: 'https://powericasolutions.com',  // Updated live link
-      image: '/project/powerica.jpeg',
+      link: 'https://powericasolutions.com',
+      image: '/project/OFS.jpg',
       category: 'Energy Tech',
-      description: `Integrated energy management system for manufacturing plants with real-time consumption monitoring and carbon footprint tracking.`,
-      techStack: ['Angular', 'Java', 'TimescaleDB', 'Grafana'],
+      description: `AI-driven energy orchestration platform for industrial facilities, optimizing power consumption, renewable integration, and carbon neutrality goals.`, 
+      modules: [
+        { 
+          name: 'Real-Time Monitoring', 
+          description: 'Live tracking of energy usage across machinery, HVAC, and production lines with IoT sensor integration' 
+        },
+        { 
+          name: 'Carbon Analytics', 
+          description: 'Granular CO2 emission calculations tied to specific processes, equipment, and energy sources' 
+        },
+        { 
+          name: 'Demand Forecasting', 
+          description: 'Machine learning models predicting energy needs based on production schedules and weather patterns' 
+        },
+        { 
+          name: 'Renewable Controller', 
+          description: 'Automated switching between grid, solar, and battery storage based on cost and sustainability targets' 
+        },
+        { 
+          name: 'Compliance Reporting', 
+          description: 'Pre-built templates for ISO 50001, RECs (Renewable Energy Certificates), and carbon credit auditing' 
+        },
+        { 
+          name: 'Peak Shaving', 
+          description: 'AI-powered load shifting to avoid demand charges during utility rate spikes' 
+        }
+      ],
       features: [
-        '⚡ Energy consumption analytics',
-        '📉 Carbon emission tracking',
-        '🌞 Solar integration modules',
-        '🏭 Machine-level power monitoring'
+        {
+          icon: <FaPlug className="text-blue-500 text-2xl" />,
+          title: 'Live Energy Pulse Monitoring',
+          description: 'Second-by-second tracking of power quality, voltage irregularities, and harmonic distortions across all connected assets. Trigger automated responses for anomalies exceeding thresholds.'
+        },
+        {
+          icon: <FaLeaf className="text-blue-500 text-2xl" />,
+          title: 'Carbon Footprint Heatmaps',
+          description: 'Visualize emission hotspots across production lines with drill-down capabilities to machine-level data. Compare actuals against sustainability benchmarks in real time.'
+        },
+        {
+          icon: <FaSolarPanel className="text-blue-500 text-2xl" />,
+          title: 'Renewable Energy Orchestration',
+          description: 'Seamlessly blend grid power with onsite solar/wind generation. Automatically prioritize renewable sources during peak tariff hours while maintaining production SLAs.'
+        },
+        {
+          icon: <FaMicrochip className="text-blue-500 text-2xl" />,
+          title: 'Machine-Level Efficiency Scoring',
+          description: 'AI algorithms rate equipment energy performance using OEE (Overall Equipment Effectiveness) data. Recommend maintenance or retirement for energy-inefficient assets.'
+        },
+        {
+          icon: <FaChartLine className="text-blue-500 text-2xl" />,
+          title: 'Predictive Demand Shaping',
+          description: 'Anticipate energy needs 72 hours ahead using production schedules and weather forecasts. Pre-cool facilities or charge batteries during off-peak windows.'
+        },
+        {
+          icon: <FaFileInvoiceDollar className="text-blue-500 text-2xl" />,
+          title: 'Auto-Generated Sustainability Reports',
+          description: 'Compile auditable reports for carbon credits, RECs, and ESG compliance. Integrate with SAP EHS for enterprise-wide sustainability tracking.'
+        }
       ],
       benefits: [
-        '📉 25% energy cost reduction',
-        '🌱 30% lower carbon footprint',
-        '📈 15% improved machine utilization',
-        '🔌 Smart grid integration'
+        {
+          icon: <FaMoneyBillWave className="text-blue-500 text-2xl" />,
+          title: '35% Lower Energy Costs',
+          description: 'Reduce peak demand charges and optimize renewable usage to cut operational expenses while maintaining production uptime.'
+        },
+        {
+          icon: <FaGlobeEurope className="text-blue-500 text-2xl" />,
+          title: 'Carbon-Neutral Operations',
+          description: 'Achieve net-zero targets faster with real-time emission tracking and automated renewable energy balancing across facilities.'
+        },
+        {
+          icon: <FaTachometerAlt className="text-blue-500 text-2xl" />,
+          title: '20% Higher Asset Utilization',
+          description: 'Identify and retire energy-draining equipment while optimizing schedules for high-efficiency machinery.'
+        },
+        {
+          icon: <FaBatteryFull className="text-blue-500 text-2xl" />,
+          title: 'Grid-Independent Manufacturing',
+          description: 'Maintain 95% uptime during power outages through intelligent battery management and renewable energy reserves.'
+        },
+        {
+          icon: <FaShieldAlt className="text-blue-500 text-2xl" />,
+          title: 'Regulatory Compliance',
+          description: 'Stay ahead of energy regulations with automated documentation for CEA (Central Electricity Authority) and international green manufacturing standards.'
+        },
+        {
+          icon: <FaExpandAlt className="text-blue-500 text-2xl" />,
+          title: 'Enterprise Scalability',
+          description: 'Deploy across global facilities with localized energy pricing models and multi-currency carbon credit market integration.'
+        }
       ]
     },
 
@@ -413,12 +796,12 @@ const ProjectDetails = () => {
       category: 'Industry 4.0',
       description:'An Enterprise Resource Planning (ERP) solution for SB Industries will help streamline business operations, integrate departments, and improve efficiency. The ERP system will unify various business processes into a single platform, ensuring real-time data access, automation, and better decision-making.', 
       modules: [
-        { name: 'Scheduling', description: '...' },
-        { name: 'Production Planning', description: '...' },
-        { name: 'PROND', description: '...' },
-        { name: 'Recording', description: '...' },
-        { name: 'Quality Inspection', description: '...' },
-        { name: 'HRMS', description: '...' }
+        { name: 'Accounting', description:  '' },
+        { name: 'HRMS', description:  '' },
+        { name: 'CRMS', description:  '' },
+        { name: 'Project Management System', description:  '' },
+        { name: 'Inventry', description:  '' },
+        { name: 'Production', description:  '' }
       ],
       features: [
         {
@@ -479,75 +862,74 @@ const ProjectDetails = () => {
 
     { 
       id: 17,
-      title: 'Electrodigit',
+      title: 'ANTB',
       link: '#',
-      image: '/Eptiq clients/ELECTRODIGIT.jpeg',
+      image: '/Eptiq clients/ANTB.png',
       category: 'Industry 4.0',
-      description: `MES solution for electronics manufacturing with component-level traceability and real-time process control. Supports high-mix/low-volume production.`,
+      description: `Unified ERP-SCADA integration platform bridging business operations with industrial automation for real-time production optimization and closed-loop manufacturing.`, 
       modules: [
-        { name: 'Scheduling', description: '...' },
-        { name: 'Production Planning', description: '...' },
-        { name: 'PROND', description: '...' },
-        { name: 'Recording', description: '...' },
-        { name: 'Quality Inspection', description: '...' },
-        { name: 'HRMS', description: '...' }
+        { name: 'Scheduling', description:  '' },
+        { name: 'Production Planning', description:  '' },
+        { name: 'PROND', description:  '' },
+        { name: 'Recording', description:  '' },
+        { name: 'Quality Inspection', description:  '' },
+        { name: 'HRMS', description:  '' }
       ],
       features: [
         {
-          icon: <FaEye className="text-blue-500 text-2xl" />,
-          title: 'Real-Time Production Monitoring',
-          description: 'MES provides real-time visibility into production activities, helping track progress, detect bottlenecks, and ensure timely delivery. Operators and managers can monitor machinery status, production rates, and downtime, which leads to faster corrective actions.'
-        },
-        {
           icon: <FaSyncAlt className="text-blue-500 text-2xl" />,
-          title: 'Integration with Existing ERP',
-          description: 'Our MES seamlessly integrates with your current ERP system, creating a fully connected environment. This integration ensures that data flows smoothly between production lines and back-office functions, providing comprehensive insights into the manufacturing process while keeping sales, purchase, and financial operations in sync.'
+          title: 'Bidirectional ERP-SCADA Sync',
+          description: 'Real-time data exchange between business systems and plant floor devices. Production orders from ERP automatically trigger SCADA workflows, while equipment telemetry updates inventory levels in ERP.'
         },
         {
           icon: <FaRobot className="text-blue-500 text-2xl" />,
-          title: 'Process Automation',
-          description: 'Automation is a cornerstone of MES, reducing manual input and ensuring consistency in production. From raw material tracking to finished product assembly, automated workflows eliminate repetitive tasks, allowing teams to focus on value-added activities.'
+          title: 'Automated Closed-Loop Processes',
+          description: 'SCADA-collected machine data triggers ERP actions: Auto-replenish materials when stock dips below thresholds, schedule maintenance based on equipment runtime, and adjust production plans using actual cycle times.'
         },
         {
-          icon: <FaCheckCircle className="text-blue-500 text-2xl" />,
-          title: 'Quality Control and Traceability',
-          description: 'MES enhances quality management by enabling real-time monitoring of product standards. Every stage of production is documented, and product quality is continuously tracked, ensuring compliance with industry standards. This helps reduce defects, improve product reliability, and ensure traceability for every unit produced.'
+          icon: <FaMicrochip className="text-blue-500 text-2xl" />,
+          title: 'Unified Asset Intelligence',
+          description: 'Combine ERP maintenance schedules with SCADA condition monitoring for predictive upkeep. Visualize OEE (Overall Equipment Effectiveness) metrics alongside financial performance in unified dashboards.'
         },
-        {
-          icon: <FaCalendarAlt className="text-blue-500 text-2xl" />,
-          title: 'Production Scheduling and Optimization',
-          description: 'By utilizing real-time data from both the shop floor and ERP, MES helps optimize production scheduling. This ensures efficient use of resources, minimizes downtime, and maintains optimal throughput, increasing overall manufacturing performance.'
-        }
-      ],
-    
-      benefits: [
         {
           icon: <FaChartLine className="text-blue-500 text-2xl" />,
-          title: 'Enhanced Operational Visibility',
-          description: 'Integrating MES with your ERP system gives you a 360-degree view of your operations, from raw material procurement to finished goods, helping you make better-informed decisions.'
+          title: 'Energy-Aware Production',
+          description: 'SCADA power consumption data integrated with ERP cost models. Automatically shift non-critical operations to off-peak hours based on real-time energy pricing from smart grid APIs.'
         },
+        {
+          icon: <FaPlug className="text-blue-500 text-2xl" />,
+          title: 'IoT Edge Integration',
+          description: 'Direct connectivity between ERP and PLCs/RTUs through OPC UA. Execute material call-offs directly from production line HMIs while maintaining ERP system of record integrity.'
+        }
+      ],
+      benefits: [
         {
           icon: <FaCogs className="text-blue-500 text-2xl" />,
-          title: 'Improved Manufacturing Efficiency',
-          description: 'With real-time monitoring and automated process control, MES reduces downtime and increases throughput. The integration with ERP optimizes the entire production flow, from materials management to order fulfillment, resulting in cost savings and higher production efficiency.'
+          title: 'E2E Process Automation',
+          description: 'Reduce manual data entry by 90% through seamless ERP-SCADA integration. Purchase orders automatically convert to machine programs, with production results updating financial records in real-time.'
         },
         {
-          icon: <FaDatabase className="text-blue-500 text-2xl" />,
-          title: 'Accurate Data for Business Decisions',
-          description: 'MES ensures that accurate, real-time data from the shop floor is fed into your ERP, providing better insights into production performance. This allows managers to make more informed decisions about inventory, procurement, and capacity planning, aligning manufacturing operations with broader business objectives.'
+          icon: <FaClock className="text-blue-500 text-2xl" />,
+          title: 'Zero Latency Manufacturing',
+          description: 'Achieve 1-second latency between shop floor events and ERP updates. Respond to material shortages or quality issues before they impact production schedules.'
         },
         {
-          icon: <FaExpandArrowsAlt className="text-blue-500 text-2xl" />,
-          title: 'Greater Flexibility and Scalability',
-          description: 'The MES system can be easily scaled as your business grows. As production demands increase, the system can handle more complex workflows, product lines, and customization requirements, without disrupting existing operations.'
+          icon: <FaMoneyBillWave className="text-blue-500 text-2xl" />,
+          title: 'Dynamic Cost Optimization',
+          description: 'Adjust production routes based on real-time ERP cost data and SCADA machine availability. Automatically reroute orders to most cost-effective lines during energy price spikes.'
         },
         {
-          icon: <FaThumbsUp className="text-blue-500 text-2xl" />,
-          title: 'Improved Product Quality',
-          description: 'MES offers continuous monitoring of production quality, enabling businesses to identify and address quality issues early in the process. This integration with ERP ensures that quality standards are maintained consistently, leading to fewer defects, improved customer satisfaction, and reduced costs associated with rework.'
+          icon: <FaShieldAlt className="text-blue-500 text-2xl" />,
+          title: 'Audit-Proof Compliance',
+          description: 'Tamper-proof records combining ERP transactions with SCADA sensor data. Reconstruct full production history including machine parameters for every batch/serial number.'
+        },
+        {
+          icon: <FaExpandAlt className="text-blue-500 text-2xl" />,
+          title: 'Multi-Plant Synchronization',
+          description: 'Central ERP coordinates production across SCADA systems in distributed facilities. Balance loads between plants based on real-time capacity and local energy constraints.'
         }
       ]
-    },
+    }
 
     
     // ... (Other projects follow similar enhanced structure)
@@ -695,6 +1077,8 @@ const ProjectDetails = () => {
             <FaArrowLeft className="mr-2" /> All Projects
           </Link>
         </div>
+
+        
 
       </div>
     </section>
