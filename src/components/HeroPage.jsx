@@ -1,6 +1,7 @@
 import React from 'react';
 import Slider from 'react-slick';
 import { FaLaptopCode, FaMobileAlt, FaCloud, FaCheckCircle } from 'react-icons/fa';
+import { TypeAnimation } from 'react-type-animation';
 
 function HeroPage() {
   const settings = {
@@ -52,10 +53,17 @@ function HeroPage() {
       <div className="text-center md:text-left md:w-1/2 space-y-6 md:space-y-8 z-10">
         <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-wrap animate-fadeInUp text-shadow-lg">
           <span className="text-cyan-200 animate-pulse-slow">Welcome to</span> 
-          <span className="block mt-2 bg-gradient-to-r from-cyan-400 to-blue-300 bg-clip-text ">
-            Eptiq Technologies
+          <span className="block mt-2">
+            <TypeAnimation
+              sequence={['Eptiq Technologies', 2000, '', 500,]}
+              wrapper="span"
+              speed={10}
+              deletionSpeed={70} // Erase speed
+              repeat={Infinity}
+              className="bg-gradient-to-r from-cyan-400 to-blue-300 bg-clip-text text-transparent"
+              cursor={false}
+            />
           </span>
-          
         </h2>
         <p className="text-lg md:text-xl font-light md:font-semibold text-shadow-md animate-slideInLeft">
           <span className="font-bold text-yellow-200">Empowering Businesses</span> with Cutting-Edge Digital Solutions
@@ -130,7 +138,6 @@ function HeroPage() {
 
       {/* Responsive Styles */}
       <style jsx global>{`
-        /* Mobile-specific adjustments */
         @media (max-width: 768px) {
           .slider-container {
             max-width: 100vw;
@@ -142,7 +149,6 @@ function HeroPage() {
           }
         }
 
-        /* Desktop restoration */
         @media (min-width: 768px) {
           .slider-container {
             padding: 0;
@@ -158,7 +164,6 @@ function HeroPage() {
           }
         }
 
-        /* Animation keyframes */
         @keyframes pulse-slow {
           0%, 100% { opacity: 1; }
           50% { opacity: 0.8; }
