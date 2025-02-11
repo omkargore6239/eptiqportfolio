@@ -49,7 +49,7 @@ function HeroPage() {
   return (
     <section className="relative bg-gradient-to-br from-blue-600 to-blue-800 text-white w-full min-h-screen flex flex-col md:flex-row items-center justify-center py-12 px-6 md:px-12 mt-16 sm:mt-0">
       {/* Text Content */}
-      <div className="text-center md:text-left md:w-1/2 space-y-6 md:space-y-8 z-10">
+      <div className="text-center md:text-left md:w-1/2 space-y-4 md:space-y-8 z-10">
         <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-wrap animate-fadeInUp text-shadow-lg">
           <span className="text-cyan-200 animate-pulse-slow">Welcome to</span> 
           <span className="block mt-2 bg-gradient-to-r from-cyan-400 to-blue-300 bg-clip-text text-transparent">

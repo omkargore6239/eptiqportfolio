@@ -6,7 +6,7 @@ import {
   FaEye,
   FaSyncAlt,
   FaRobot,
-  FaChartLine,      // Single instance (was duplicate)
+  FaChartLine,      
   FaCogs,
   FaDatabase,
   FaExpandArrowsAlt,
@@ -14,7 +14,7 @@ import {
   FaPaperPlane,
   FaRoute,
   FaUsersCog,
-  FaShieldAlt,      // Single instance (was duplicate)
+  FaShieldAlt,      
   FaUserClock,
   FaCube,
   FaClock,
