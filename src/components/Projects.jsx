@@ -38,13 +38,13 @@ function Projects() {
     { title: 'Electrodigit', link: '#', image: '/Eptiq clients/ELECTRODIGIT.jpeg', category: 'MES', id: 10 },
     { title: 'SB Industries', link: '#', image: '/Eptiq clients/SBI.jpg', category: 'ERP', id: 16 },
     { title: 'AVS Engineering', link: '#', image: '/Eptiq clients/AVS.png', category: 'MES', id: 12 },
-    { title: 'Cummins India', link: '#', image: '/Eptiq clients/CUMMINS.jpg', category: 'Automation', id: 13 },
+    { title: 'Falcon Automation', link: '#', image: '/Eptiq clients/Falcon.jpeg', category: 'Automation', id: 13 },
     { title: 'Global tek', link: '#', image: '/Eptiq clients/Globaltek.jpeg', category: 'MES', id: 14 },
     { title: 'Powerica', link: '#', image: '/Eptiq clients/Powerica.jpg', category: 'OFS', id: 15 },
     { title: 'ANTB', link: '#', image: '/Eptiq clients/ANTB.png', category: 'MES', id: 17 },
     { title: 'Padcorp', link: 'https://padcorp.shop/', image: '/project/padcorp.jpeg', category: 'Commercial', id: 2 },
     { title: 'VegoBike', link: 'https://play.google.com/store/apps/details?id=com.vegobike', image: '/project/vegobike.jpeg', category: 'Commercial', id: 3 },
-    { title: 'Matchwell Engineering', link: '#', image: '/project/matchwell.jpeg', category: 'MES', id: 11 },
+    // { title: 'Matchwell Engineering', link: '#', image: '/project/matchwell.jpeg', category: 'MES', id: 11 },
     { title: 'Sasha Clothings', link: 'https://sashaclothings.in', image: '/project/sashaclothings.jpeg', category: 'Commercial', id: 4 },
     { title: 'AK Enterprises', link: 'https://akenterprisess.in', image: '/project/akenterprises.jpeg', category: 'Commercial', id: 5 },
     { title: 'Harkal Studios', link: 'https://harkalstudios.in', image: '/project/harkalstudios.jpeg', category: 'Commercial', id: 6 },
@@ -97,8 +97,8 @@ function Projects() {
             <button
               key={category}
               className={`px-6 py-2 text-lg font-semibold rounded-full transition-all duration-300 
-                        ${activeCategory === category ? 'bg-blue-600 text-white' : 'bg-white text-blue-600'} 
-                        hover:bg-blue-500 hover:text-white focus:outline-none mb-2`}
+                        ${activeCategory === category ? 'bg-blue-900 text-white' : 'bg-white text-blue-600'} 
+                        hover:bg-blue-900 hover:text-white focus:outline-none mb-2`}
               onClick={() => setActiveCategory(category)}
             >
               {category}

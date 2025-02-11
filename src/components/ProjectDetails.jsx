@@ -54,12 +54,14 @@ const ProjectDetails = () => {
 
   // Module icons configuration
   const moduleIcons = {
-    scheduling: <FaCalendarAlt className="text-purple-500 text-xl mr-3" />,
-    planning: <FaClipboardList className="text-blue-500 text-xl mr-3" />,
-    prond: <FaMicrochip className="text-green-500 text-xl mr-3" />,
-    recording: <FaClipboardList className="text-red-500 text-xl mr-3" />,
-    quality: <FaSearch className="text-yellow-500 text-xl mr-3" />,
-    hrms: <FaUsers className="text-pink-500 text-xl mr-3" />
+    // scheduling: <FaCalendarAlt className="text-purple-500 text-xl mr-3" />,
+    // ProductionPlanning: <FaClipboardList className="text-blue-500 text-xl mr-3" />,
+    // planning: <FaClipboardList className="text-blue-500 text-xl mr-3" />,
+    // prond: <FaMicrochip className="text-green-500 text-xl mr-3" />,
+    // recording: <FaClipboardList className="text-red-500 text-xl mr-3" />,
+    // quality: <FaSearch className="text-yellow-500 text-xl mr-3" />,
+    // hrms: <FaUsers className="text-pink-500 text-xl mr-3" />
+    
   };
 
   const projects = [
@@ -385,7 +387,7 @@ const ProjectDetails = () => {
       description: `MES solution for electronics manufacturing with component-level traceability and real-time process control. Supports high-mix/low-volume production.`,
       modules: [
         { name: 'Scheduling', description:  '' },
-        { name: 'Production Planning', description:  '' },
+        { name: 'ProductionPlanning', description:  '' },
         { name: 'PROND', description:  '' },
         { name: 'Recording', description:  '' },
         { name: 'Quality Inspection', description:  '' },
@@ -545,14 +547,16 @@ const ProjectDetails = () => {
 ,
     { 
       id: 13,
-      title: 'Cummins',
+      title: 'Falcon',
       link: '#',  // Updated live link
-      image: '/Eptiq clients/CUMMINS.jpg',
+      image: '/Eptiq clients/Falcon.jpeg',
       category: 'Supply Chain Tech',
-      description: `Seamless integration platform connecting Order Fulfillment Systems with ERP solutions for real-time supply chain visibility.`, 
+      description: `At Falcon, we successfully delivered a fully integrated ERP and Order Fulfillment System (OFS) that work in synergy to streamline their operations. The ERP system handles core business functions such as finance, HR, inventory, and procurement, while the OFS ensures real-time tracking of dispatches, notifications to clients, and order processing.
+
+The integration between these systems enables seamless data flow across departments, reducing operational friction and enabling more informed decision-making. Real-time updates on orders, coupled with detailed reports from both systems, give managers and teams full visibility into the manufacturing and supply chain processes. This integration has not only enhanced productivity but also optimized the order fulfillment cycle, ensuring that products are delivered on time and to the highest standards.`, 
       modules: [
         { name: 'Scheduling', description:  '' },
-        { name: 'Production Planning', description:  '' },
+        { name: 'ProductionPlanning', description:  '' },
         { name: 'PROND', description:  '' },
         { name: 'Recording', description:  '' },
         { name: 'Quality Inspection', description:  '' },
@@ -561,50 +565,47 @@ const ProjectDetails = () => {
       features: [
         {
           icon: <FaEye className="text-blue-500 text-2xl" />,
-          title: 'Real-Time Order Tracking',
-          description: 'Gain real-time visibility into order status, from placement to fulfillment. Track orders across the supply chain, ensuring timely delivery and reducing delays.'
-        },
+          title: 'End to end integration',
+          description: ' ERP and OFS are tightly integrated, providing a seamless flow of information across finance, inventory, procurement, and dispatch.' },
         {
           icon: <FaSyncAlt className="text-blue-500 text-2xl" />,
-          title: 'ERP-OFS Synchronization',
-          description: 'Seamlessly integrate ERP and OFS to ensure data consistency across systems. Automate data flow between order management, inventory, and financial systems for accurate and up-to-date information.'
-        },
+          title: 'Real-Time Notifications',
+          description: 'Clients are automatically notified upon dispatch with details like tracking numbers and delivery schedules, enhancing communication and customer satisfaction.'},
         {
           icon: <FaRobot className="text-blue-500 text-2xl" />,
-          title: 'Automated Order Processing',
-          description: 'Automate order entry, validation, and fulfillment processes. Reduce manual errors and improve efficiency by streamlining workflows between ERP and OFS.'
+          title: 'Multi-Level Authentication',
+          description: ' The system includes verification steps to ensure data accuracy before dispatch, reducing errors and improving overall efficienc'
         },
         {
           icon: <FaCheckCircle className="text-blue-500 text-2xl" />,
-          title: 'Inventory Optimization',
-          description: 'Leverage real-time inventory data from ERP and OFS to optimize stock levels. Avoid overstocking or stockouts, and ensure materials are available for production and order fulfillment.'
+          title: 'Automated Dispatch Tracking',
+          description: 'All orders are tracked in real time from dispatch to delivery, ensuring that both internal teams and clients are kept informed at every step.'
         },
-        // {
-        //   icon: <FaCalendarAlt className="text-blue-500 text-2xl" />,
-        //   title: 'Demand Forecasting',
-        //   description: 'Use integrated data from ERP and OFS to predict demand accurately. Improve production planning and inventory management to meet customer needs efficiently.'
-        // }
+        {
+          icon: <FaCalendarAlt className="text-blue-500 text-2xl" />,
+          title: 'Comprehensive Reporting',
+          description: ' Managers receive detailed reports from both systems, allowing for better strategic decisions based on data-driven insights.'
+        }
       ],
       benefits: [
         {
           icon: <FaChartLine className="text-blue-500 text-2xl" />,
-          title: 'End-to-End Supply Chain Visibility',
-          description: 'Achieve complete visibility across the supply chain, from order placement to delivery. Make data-driven decisions to enhance operational efficiency and customer satisfaction.'
-        },
+          title: 'Streamlined Operations',
+          description: ' With ERP and OFS working together, processes are more efficient, reducing the time spent on manual tasks and improving overall workflow.'},
         {
           icon: <FaCogs className="text-blue-500 text-2xl" />,
-          title: 'Streamlined Operations',
-          description: 'Integrate ERP and OFS to eliminate silos and streamline operations. Reduce manual effort, improve accuracy, and accelerate order fulfillment processes.'
+          title: 'Increased Productivity',
+          description: 'Automation of key tasks and real-time updates result in faster order processing, reducing delays and improving client satisfaction.'
         },
         {
           icon: <FaDatabase className="text-blue-500 text-2xl" />,
-          title: 'Data-Driven Decision Making',
-          description: 'Access real-time data from ERP and OFS to make informed decisions. Improve forecasting, inventory management, and production planning with accurate insights.'
+          title: 'Better Data Accuracy',
+          description: 'The integration minimizes errors by ensuring that all systems are working with the same set of up-to-date information, enhancing decision-making.'
         },
         {
           icon: <FaExpandArrowsAlt className="text-blue-500 text-2xl" />,
-          title: 'Scalable and Flexible Solutions',
-          description: 'The integrated ERP-OFS platform is designed to scale with your business. Adapt to changing demands and expand operations without disrupting existing workflows.'
+          title: 'Improved Client Communication',
+          description: 'Automated notifications ensure that clients are kept in the loop, improving their experience and fostering stronger relationships.'
         },
         // {
         //   icon: <FaThumbsUp className="text-blue-500 text-2xl" />,
@@ -873,7 +874,7 @@ const ProjectDetails = () => {
       description: `Unified ERP-SCADA integration platform bridging business operations with industrial automation for real-time production optimization and closed-loop manufacturing.`, 
       modules: [
         { name: 'Scheduling', description:  '' },
-        { name: 'Production Planning', description:  '' },
+        { name: 'ProductionPlanning', description:  '' },
         { name: 'PROND', description:  '' },
         { name: 'Recording', description:  '' },
         { name: 'Quality Inspection', description:  '' },
