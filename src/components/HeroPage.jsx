@@ -52,9 +52,10 @@ function HeroPage() {
       <div className="text-center md:text-left md:w-1/2 space-y-6 md:space-y-8 z-10">
         <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-wrap animate-fadeInUp text-shadow-lg">
           <span className="text-cyan-200 animate-pulse-slow">Welcome to</span> 
-          <span className="block mt-2 bg-gradient-to-r from-cyan-400 to-blue-300 bg-clip-text text-transparent">
+          <span className="block mt-2 bg-gradient-to-r from-cyan-400 to-blue-300 bg-clip-text ">
             Eptiq Technologies
           </span>
+          
         </h2>
         <p className="text-lg md:text-xl font-light md:font-semibold text-shadow-md animate-slideInLeft">
           <span className="font-bold text-yellow-200">Empowering Businesses</span> with Cutting-Edge Digital Solutions
